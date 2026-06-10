@@ -15,5 +15,6 @@ MonoBehaviour:
   tileName: Fairway
   modifier: 1
   isTall: 0
-  isTargetable: 0
+  isTargetable: 1
   isPuttable: 1
+  sprite: {fileID: 7618582275233151321, guid: 73fddf4a412ef068da3eab05386c6da6, type: 3}

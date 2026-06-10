@@ -15,5 +15,6 @@ MonoBehaviour:
   tileName: Sand
   modifier: -1
   isTall: 0
-  isTargetable: 0
+  isTargetable: 1
   isPuttable: 1
+  sprite: {fileID: -2717612690483545218, guid: 63fdb576082b589499f2541f980aa246, type: 3}

@@ -15,4 +15,6 @@ MonoBehaviour:
   tileName: Rough
   modifier: 0
   isTall: 0
-  isTargetable: 0
+  isTargetable: 1
+  isPuttable: 0
+  sprite: {fileID: -4497259203545329580, guid: 988a8902cc1fe79d584cc5e5313f2628, type: 3}
