@@ -20,5 +20,12 @@ public class GameManager : MonoBehaviour
         board = boardFactory.CreateBoard(3, 5);
         GameObject ball = Instantiate(golfBallPrefab, board.tiles[0, 0].transform.position, new Quaternion());
         golfBall = ball.GetComponent<GolfBall>();
+        EventManager.instance.OnTileClick += MoveEvent;
+    }
+
+    private void MoveEvent(int x, int y)
+    {
+        Vector3 newPosition = board.tiles[x, y].transform.position;
+        golfBall.move(newPosition, new Vector2Int(x,y));
     }
 }

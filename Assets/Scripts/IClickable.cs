@@ -2,11 +2,7 @@ using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class IClickable : MonoBehaviour
+public interface IClickable
 {
-    
-    private void OnMouseDown()
-    {
-        throw new NotImplementedException();
-    }
+    void OnClicked();
 }

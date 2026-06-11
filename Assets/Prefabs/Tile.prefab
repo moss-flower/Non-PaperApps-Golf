@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 343782108294238508}
   - component: {fileID: 4459856786198172146}
   - component: {fileID: 2443399963267632123}
+  - component: {fileID: -544295410159461586}
   m_Layer: 0
   m_Name: Tile
   m_TagString: Untagged
@@ -151,3 +152,15 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
+--- !u!114 &-544295410159461586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475330706222410343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0608afff03f34de5a01e4e225c2d7ff4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickDetector

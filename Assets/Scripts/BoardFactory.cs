@@ -21,9 +21,8 @@ public class BoardFactory : MonoBehaviour
             {
                 GameObject tile = Instantiate(tilePrefab, new Vector3(i, j, 0), Quaternion.identity, transform);
                 Tile tileComponent = tile.GetComponent<Tile>();
-                tileComponent.Initialize(tileDefinitions[random.Next(tileDefinitions.Length)]);
+                tileComponent.Initialize(tileDefinitions[random.Next(tileDefinitions.Length)], i, j);
                 board.tiles[i, j] = tileComponent;
-                
             }
         }
         return board;
