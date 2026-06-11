@@ -312,6 +312,7 @@ GameObject:
   - component: {fileID: 448280316}
   - component: {fileID: 448280315}
   - component: {fileID: 448280314}
+  - component: {fileID: 448280317}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -382,7 +383,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 448280315}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 448280317}
+        m_TargetAssemblyTypeName: RollClickDetector, Assembly-CSharp
+        m_MethodName: OnRoleClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &448280315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -421,6 +434,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 448280312}
   m_CullTransparentMesh: 1
+--- !u!114 &448280317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448280312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a56f476db0844d6a88e5ad8e45b79783, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RollClickDetector
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,7 +620,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 0000000075663aa8
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -1106,8 +1131,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   boardFactory: {fileID: 1413315690}
-  golfBallPrefab: {fileID: 170716089635760729, guid: 5ef6e351ac57359d98772c4d152df3c1, type: 3}
   boardSize: {x: 26, y: 16}
+  golfBallPrefab: {fileID: 170716089635760729, guid: 5ef6e351ac57359d98772c4d152df3c1, type: 3}
 --- !u!4 &1413315692
 Transform:
   m_ObjectHideFlags: 0

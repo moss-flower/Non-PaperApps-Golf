@@ -8,7 +8,7 @@ public class GolfBall : MonoBehaviour
     public bool canHopWalls {get; set;}
     public bool canPutt {get; set;}
 
-    private Vector2Int boardPosition;
+    public Vector2Int boardPosition { get; private set; }
 
     private void Awake()
     {
@@ -22,5 +22,6 @@ public class GolfBall : MonoBehaviour
     {
         transform.position = direction;
         boardPosition = position;
+        print(boardPosition);
     }
 }
