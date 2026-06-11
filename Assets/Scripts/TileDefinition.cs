@@ -8,5 +8,6 @@ public class TileDefinition : ScriptableObject
     public bool isTall;
     public bool isTargetable;
     public bool isPuttable;
+    public bool isClearView;
     public Sprite sprite;
 }

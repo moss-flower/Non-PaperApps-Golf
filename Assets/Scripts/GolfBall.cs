@@ -24,4 +24,6 @@ public class GolfBall : MonoBehaviour
         boardPosition = position;
         print(boardPosition);
     }
+
+    
 }

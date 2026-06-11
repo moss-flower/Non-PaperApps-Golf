@@ -20,10 +20,13 @@ public class Board
           return tiles[coordinates.x, coordinates.y];
      }
 
-     public bool isInBounds(Vector2Int coordinates)
+     public bool isInBoundsAndIsTargettable(Vector2Int coordinates)
      {
           if (coordinates.x > dimensions.x-1 || coordinates.x < 0) return false;
           if (coordinates.y > dimensions.y-1 || coordinates.y < 0) return false;
+          
+          if(!tiles[coordinates.x, coordinates.y].tileDefinition.isTargetable) return false;
+          
           return true;
      }
      

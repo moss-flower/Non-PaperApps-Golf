@@ -49,8 +49,11 @@ public class GameManager : MonoBehaviour
         {
             resetTiles();
         }
-        Vector3 newPosition = board.tiles[x, y].transform.position;
+        Tile selectedTile = board.tiles[x, y];
+        print("Moving to tile: " + selectedTile.tileDefinition.name + " at position: " + new Vector2Int(x, y));
+        Vector3 newPosition = selectedTile.transform.position;
         golfBall.move(newPosition, new Vector2Int(x,y));
+        applyTileEffect(selectedTile);
     }
 
     private Vector3 calculateBoardOffset(Vector2Int boardSize)
@@ -62,7 +65,7 @@ public class GameManager : MonoBehaviour
 
     private void HandleRoll()
     {
-        int roll = diceRoller.Roll();
+        int roll = diceRoller.Roll() + golfBall.modifier;
         print("Roll: " + roll);
         checkAvailableTiles(roll);
     }
@@ -71,11 +74,13 @@ public class GameManager : MonoBehaviour
     {
         Vector2Int root = golfBall.boardPosition;
         activeTiles.Clear();
+        // need to add a proper step-through system and a check to see if the ball
+        // can currently hop trees or not (eg, is on the fairway). 
         foreach (Vector2Int direction in orthogonalDirections)
         {
             Vector2Int pos = root + (direction * roll);
             
-            if (board.isInBounds(pos))
+            if (board.isInBoundsAndIsTargettable(pos))
             {
                 print("Checking position: " + pos);
                 Tile tile = board.getTile(pos);
@@ -93,6 +98,14 @@ public class GameManager : MonoBehaviour
             tile.makeUnclickable();
         }
         activeTiles.Clear();
+    }
+
+    private void applyTileEffect(Tile tile)
+    {
+        TileDefinition definition = tile.tileDefinition;
+        golfBall.modifier =  definition.modifier;
+        golfBall.canPutt = definition.isPuttable;
+        golfBall.canHopWalls = definition.isClearView;
     }
     
     private static readonly Vector2Int[] orthogonalDirections =
