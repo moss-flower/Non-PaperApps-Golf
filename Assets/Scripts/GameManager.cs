@@ -78,15 +78,37 @@ public class GameManager : MonoBehaviour
         // can currently hop trees or not (eg, is on the fairway). 
         foreach (Vector2Int direction in orthogonalDirections)
         {
-            Vector2Int pos = root + (direction * roll);
+            bool isBlocked = false;
             
-            if (board.isInBoundsAndIsTargettable(pos))
+            // First check whether the final spot is even a valid target, if not, continue.
+            Vector2Int pos = root + (direction * roll);
+            if (!board.isInBoundsAndIsTartetable(pos))
             {
-                print("Checking position: " + pos);
-                Tile tile = board.getTile(pos);
-                tile.makeClickable();
-                activeTiles.Add(tile);
+                continue;
             }
+            
+            // If it IS targetable, then check if we can shoot over trees.
+            // If we can, get the tile and move on.
+            // If we can't shoot over trees, check if there are any trees in the way.
+
+            if (golfBall.canHopWalls)
+            {
+                makeClickableAndAddTile(board.getTile(pos));
+                continue;
+            }
+            
+            for (int i = 0; i < roll; i++)
+            {
+                pos = root + (direction * i);
+                if (board.getTile(pos).tileDefinition.isTall)
+                {
+                    isBlocked = true;
+                    break;
+                }
+            }
+            if (isBlocked) continue;
+            pos = root + (direction * roll);
+            makeClickableAndAddTile(board.getTile(pos));
             
         }
     }
@@ -106,6 +128,12 @@ public class GameManager : MonoBehaviour
         golfBall.modifier =  definition.modifier;
         golfBall.canPutt = definition.isPuttable;
         golfBall.canHopWalls = definition.isClearView;
+    }
+
+    private void makeClickableAndAddTile(Tile tile)
+    {
+        tile.makeClickable();
+        activeTiles.Add(tile);
     }
     
     private static readonly Vector2Int[] orthogonalDirections =
