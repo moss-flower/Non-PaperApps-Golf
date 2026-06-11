@@ -1,0 +1,8 @@
+# Wrap paths with spaces in double quotes
+"Assets/TextMesh Pro/**" linguist-vendored
+Assets/Plugins/** linguist-vendored
+
+# Treat all shader files as third-party vendor code
+*.shader linguist-vendored
+*.cginc linguist-vendored
+*.hlsl linguist-vendored
