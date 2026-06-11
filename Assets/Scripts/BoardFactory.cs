@@ -4,12 +4,14 @@ using Random = System.Random;
 
 public class BoardFactory : MonoBehaviour
 {
-    //public GameObject[] tilePrefabs {get; private set;}
     public GameObject tilePrefab;
     public TileDefinition[] tileDefinitions;
     
     public Board CreateBoard(int width, int height)
     {
+        //somewhere in here we'll have to take some sort of input so we can 
+        //automatically generate the board with the correct definitions
+        //probably json or something.
         Board board = new Board(width, height);
         int size = tileDefinitions.Length;
         Random random = new Random();
