@@ -12,7 +12,7 @@ public class DiceRoller
     public int Roll()
     {
         Random random = new Random();
-        int roll = random.Next(1);
+        int roll = random.Next(6) + 1;
         LastRoll = roll;
         return roll;
     }

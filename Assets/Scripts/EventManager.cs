@@ -14,12 +14,23 @@ public class EventManager : MonoBehaviour
     }
     
     public event Action<int,int> OnTileClick;
+    public event Action OnRoleClick;
+    
+    
 
     public void OnClickEvent(int x, int y)
     {
         if (OnTileClick != null)
         {
             OnTileClick(x, y);
+        }
+    }
+
+    public void OnClickRole()
+    {
+        if (OnRoleClick != null)
+        {
+            OnRoleClick();
         }
     }
 }
