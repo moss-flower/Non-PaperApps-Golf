@@ -62,8 +62,8 @@ public class BoardFactory : MonoBehaviour
             tileComponent.Initialize(ParseTileDefinition(data.type),  data.x, data.y);
             board.tiles[data.x,data.y] = tileComponent;
         }
-        board.startTile = board.getTile(new Vector2Int(boardData.startTileLocation.Item1, boardData.startTileLocation.Item2));
-        board.winTile = board.getTile(new Vector2Int(boardData.winTileLocation.Item1, boardData.winTileLocation.Item2));
+        board.startTileLocation = convertBoardDataInfoToVector2Int(boardData.startTileLocation);
+        board.winTileLocation = convertBoardDataInfoToVector2Int(boardData.winTileLocation);
         return board;
     }
 
@@ -75,6 +75,11 @@ public class BoardFactory : MonoBehaviour
             print("Adding tile to dictionary: "  + tileDefinition.name);
             _dictionary.Add(tileDefinition.tileName, tileDefinition);
         }
+    }
+
+    private Vector2Int convertBoardDataInfoToVector2Int((int x, int y) info)
+    {
+        return new Vector2Int(info.Item1, info.Item2);
     }
     
     // note: have the flag and tee stored as part of the serialization step so that when 

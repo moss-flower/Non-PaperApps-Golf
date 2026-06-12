@@ -7,8 +7,8 @@ public class Board
      public Tile[,]  tiles;
      public List<Tile> highLightedTiles  = new List<Tile>();
      private Vector2Int dimensions;
-     public Tile startTile {get; set;}
-     public Tile winTile {get; set;}
+     public Vector2Int startTileLocation;
+     public Vector2Int winTileLocation;
      
 
      public Board(int width, int height)
