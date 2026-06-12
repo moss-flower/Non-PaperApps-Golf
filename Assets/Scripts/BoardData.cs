@@ -7,4 +7,6 @@ public class BoardData
     public int width;
     public int height;
     public List<TileData> tiles;
+    public (int, int) winTileLocation;
+    public (int, int) startTileLocation;
 }
