@@ -67,13 +67,13 @@ public class GameManager : MonoBehaviour
     {
         int roll = diceRoller.Roll() + golfBall.modifier;
         print("Roll: " + roll);
+        resetTiles();
         checkAvailableTiles(roll);
     }
 
     private void checkAvailableTiles(int roll)
     {
         Vector2Int root = golfBall.boardPosition;
-        activeTiles.Clear();
         // need to add a proper step-through system and a check to see if the ball
         // can currently hop trees or not (eg, is on the fairway). 
         foreach (Vector2Int direction in orthogonalDirections)

@@ -17,4 +17,5 @@ MonoBehaviour:
   isTall: 0
   isTargetable: 1
   isPuttable: 1
-  sprite: {fileID: -2717612690483545218, guid: 63fdb576082b589499f2541f980aa246, type: 3}
+  isClearView: 0
+  sprite: {fileID: -8787776629553354210, guid: 45040726dd5fd968f81ea63e820afd05, type: 3}
