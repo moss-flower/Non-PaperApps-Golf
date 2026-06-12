@@ -17,9 +17,20 @@ namespace Editor
         private int width, height;
         private GameObject paintableTilePrefab;
         private TileDefinition selectedTileDefinition;
+        private float brushRadius;
         
         private GameObject boardRoot;
         private PaintableTile[,] previewTiles;
+        private bool isPreviewing => boardRoot != null;
+        
+        private void OnEnable() {
+            SceneView.duringSceneGui += OnSceneGUI;
+        }
+
+        private void OnDisable() {
+            SceneView.duringSceneGui -= OnSceneGUI;
+        }
+        
 
         private void OnGUI()
         {
@@ -42,7 +53,7 @@ namespace Editor
             
             EditorGUILayout.LabelField("Paint With: ");
             selectedTileDefinition = EditorGUILayout.ObjectField(selectedTileDefinition, typeof(TileDefinition), false) as TileDefinition;
-
+            brushRadius = EditorGUILayout.FloatField("Brush Radius", brushRadius);
             if (GUILayout.Button("Save Board"))
             {
                 SaveBoardToJSON();
@@ -63,10 +74,7 @@ namespace Editor
         
         private void GeneratePreview()
         {
-            if (boardRoot != null)
-            {
-                ClearBoard();
-            }
+            if (boardRoot != null) ClearBoard();
             
             boardRoot = new GameObject("Board");
             previewTiles = new PaintableTile[width, height];
@@ -86,13 +94,63 @@ namespace Editor
             }
         }
 
+        private void OnSceneGUI(SceneView view)
+        {
+            if(!isPreviewing || selectedTileDefinition == null) return;
+            
+            Event detectedEvent = Event.current;
+
+            if ((detectedEvent.type == EventType.MouseDown || detectedEvent.type == EventType.MouseDrag) &&
+                detectedEvent.button == 0)
+            {
+                HandleUtility.AddDefaultControl(GUIUtility.GetControlID(FocusType.Passive));
+                
+                Ray ray = HandleUtility.GUIPointToWorldRay(detectedEvent.mousePosition);
+                float distToPlane = (0f - ray.origin.z) / ray.direction.z;
+                Vector3 worldPoint3D = ray.origin + ray.direction * distToPlane;
+                Vector2 origin = new Vector2(worldPoint3D.x, worldPoint3D.y);
+                
+                Handles.color = Color.red;
+                Handles.DrawSolidDisc(origin, Vector3.back, brushRadius);
+                Handles.color = Color.yellow;
+                Handles.DrawWireDisc(origin, Vector3.back, brushRadius);
+                
+                
+                
+                Collider2D[] colliders = Physics2D.OverlapCircleAll(origin, brushRadius*0.1f);
+
+                foreach (Collider2D collider in colliders)
+                {
+                    PaintableTile tile =  collider.GetComponent<PaintableTile>();
+                    if (tile != null)
+                    {
+                        Undo.RecordObject(tile, "Paint Tile");
+                        tile.ApplyDefinition(selectedTileDefinition);
+                    }
+                }
+                detectedEvent.Use();
+            }
+            
+            /*if (detectedEvent.type == EventType.MouseDown && detectedEvent.button == 0)
+            {
+                
+                GameObject picked = HandleUtility.PickGameObject(detectedEvent.mousePosition, true);
+                if (picked != null)
+                {
+                    PaintableTile tile = picked.GetComponent<PaintableTile>();
+                    if (tile != null)
+                    {
+                        Undo.RecordObject(paintableTilePrefab, "Paint Tile");
+                        tile.ApplyDefinition(selectedTileDefinition);
+                    }
+                }
+            }*/
+            SceneView.RepaintAll();
+        }
+
         private void ClearBoard()
         {
-            if (boardRoot != null)
-            {
-                DestroyImmediate(boardRoot);
-            }
-
+            if (boardRoot != null) DestroyImmediate(boardRoot);
             previewTiles = null;
         }
 
