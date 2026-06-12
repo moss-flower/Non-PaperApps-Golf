@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7c0363e4c6584c5083a191c6b75ec13, type: 3}
-  m_Name: RoughTile
+  m_Name: TeeTile
   m_EditorClassIdentifier: Assembly-CSharp::TileDefinition
-  tileName: Rough
-  modifier: 0
+  tileName: Tee
+  modifier: 1
   isTall: 0
   isTargetable: 1
-  isPuttable: 0
-  isClearView: 0
-  isStartingTile: 0
+  isPuttable: 1
+  isClearView: 1
+  isStartingTile: 1
   isWinningTile: 0
-  sprite: {fileID: -9060497974491880586, guid: c10861d8d9d45ca22a356e3ed3992ce6, type: 3}
+  sprite: {fileID: 1961845639312781338, guid: 949e9996baa26fc3a8c7fbf42e68f8a0, type: 3}
