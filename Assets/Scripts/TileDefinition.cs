@@ -9,5 +9,7 @@ public class TileDefinition : ScriptableObject
     public bool isTargetable;
     public bool isPuttable;
     public bool isClearView;
+    public bool isStartingTile;
+    public bool isWinningTile;
     public Sprite sprite;
 }

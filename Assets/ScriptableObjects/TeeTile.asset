@@ -10,12 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7c0363e4c6584c5083a191c6b75ec13, type: 3}
-  m_Name: WaterTile
+  m_Name: TeeTile
   m_EditorClassIdentifier: Assembly-CSharp::TileDefinition
-  tileName: Water
-  modifier: 0
+  tileName: Tee
+  modifier: 1
   isTall: 0
-  isTargetable: 0
-  isPuttable: 0
-  isClearView: 0
-  sprite: {fileID: -8006328636260648763, guid: b1242e919142698718dd23a1e837a4c4, type: 3}
+  isTargetable: 1
+  isPuttable: 1
+  isClearView: 1
+  isStartingTile: 1
+  isWinningTile: 0
+  sprite: {fileID: 1961845639312781338, guid: 949e9996baa26fc3a8c7fbf42e68f8a0, type: 3}
