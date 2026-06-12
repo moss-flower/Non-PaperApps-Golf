@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
 using Unity.VisualScripting;
 using UnityEngine;
 using Random = System.Random;
@@ -6,6 +9,8 @@ public class BoardFactory : MonoBehaviour
 {
     public GameObject tilePrefab;
     public TileDefinition[] tileDefinitions;
+
+    private Dictionary<string, TileDefinition> _dictionary;
     
     public Board CreateBoard(int width, int height, Transform parent)
     {
@@ -26,5 +31,65 @@ public class BoardFactory : MonoBehaviour
             }
         }
         return board;
+    }
+
+    public Board LoadBoardFromFile(string path, Transform parent)
+    {
+        
+        TextAsset jsonFile = Resources.Load<TextAsset>(path);
+        if (jsonFile == null)
+        {
+            Debug.LogError($"File {path} does not exist");
+            return null;
+        }
+        if (_dictionary == null || _dictionary.Count == 0)
+        {
+            GenerateDictionary();
+        }
+        BoardData boardData = JsonUtility.FromJson<BoardData>(jsonFile.text);
+        if (boardData == null)
+        {
+            Debug.LogError($"File {path} is empty");
+            return null;
+        }
+        
+        Board  board = new Board(boardData.width, boardData.height);
+
+        foreach (TileData data in boardData.tiles)
+        {
+            GameObject tile = Instantiate(tilePrefab, new Vector3(data.x*0.5f, data.y*0.5f, 0), Quaternion.identity, parent);
+            Tile tileComponent = tile.GetComponent<Tile>();
+            tileComponent.Initialize(ParseTileDefinition(data.type),  data.x, data.y);
+            board.tiles[data.x,data.y] = tileComponent;
+        }
+        return board;
+    }
+
+    private void GenerateDictionary()
+    {
+        _dictionary = new Dictionary<string, TileDefinition>();
+        foreach (TileDefinition tileDefinition in tileDefinitions)
+        {
+            print("Adding tile to dictionary: "  + tileDefinition.name);
+            _dictionary.Add(tileDefinition.tileName, tileDefinition);
+        }
+    }
+    
+    // note: have the flag and tee stored as part of the serialization step so that when 
+    // deserializing, we don't need to look for it.
+
+    private TileDefinition ParseTileDefinition(string input)
+    {
+        switch (input)
+        {
+            case "Rough": return _dictionary["Rough"];
+            case "Sand": return _dictionary["Sand"];
+            case "Fairway": return _dictionary["Fairway"];
+            case "Tree": return _dictionary["Tree"];
+            case "Water": return _dictionary["Water"];
+            case "Tee": return _dictionary["Tee"];
+            case "Flag": return _dictionary["Flag"];
+            default: return _dictionary["Rough"];
+        }
     }
 }

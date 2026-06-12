@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     
     private List<Tile> activeTiles = new List<Tile>();
 
+    [SerializeField] private string boardName;
+
     
     
 
@@ -30,7 +32,8 @@ public class GameManager : MonoBehaviour
     {
         // Building board data and visuals
         GameObject boardRoot = new GameObject("Board");
-        board = boardFactory.CreateBoard(boardSize.x, boardSize.y, boardRoot.transform);
+        //board = boardFactory.CreateBoard(boardSize.x, boardSize.y, boardRoot.transform);
+        board = boardFactory.LoadBoardFromFile(boardName, boardRoot.transform);
         boardRoot.transform.position = calculateBoardOffset(boardSize);
         
         // Building Golf Ball Data

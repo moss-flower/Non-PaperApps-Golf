@@ -962,6 +962,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: eafbfdd1f78743142aed0e5d7757b4df, type: 2}
   - {fileID: 11400000, guid: 160c087d49eb86e2ba65eac45f57c07d, type: 2}
   - {fileID: 11400000, guid: bdf985ee5c9e6e993b40a78d4cd4485f, type: 2}
+  - {fileID: 11400000, guid: 36264eee7d21c6ca29a4080c1d0e7ae4, type: 2}
+  - {fileID: 11400000, guid: 24f6b4380813cf214a0846c7ce4ee957, type: 2}
 --- !u!114 &1413315691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -977,6 +979,7 @@ MonoBehaviour:
   boardFactory: {fileID: 1413315690}
   boardSize: {x: 26, y: 16}
   golfBallPrefab: {fileID: 170716089635760729, guid: 5ef6e351ac57359d98772c4d152df3c1, type: 3}
+  boardName: hole_1
 --- !u!4 &1413315692
 Transform:
   m_ObjectHideFlags: 0
