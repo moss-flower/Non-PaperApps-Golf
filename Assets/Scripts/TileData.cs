@@ -4,5 +4,5 @@ public class TileData
 {
     public int x;
     public int y;
-    public int tileType;
+    public string type;
 }

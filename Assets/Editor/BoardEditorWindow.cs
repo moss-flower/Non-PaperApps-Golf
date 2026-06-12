@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.IO;
 using UnityEditor;
 using UnityEngine;
 
@@ -89,7 +91,7 @@ namespace Editor
                 {
                     GameObject tileInstance = Instantiate(paintableTilePrefab, new Vector3(i*0.5f, j*0.5f, 0), Quaternion.identity, boardRoot.transform);
                     PaintableTile tile = tileInstance.GetComponent<PaintableTile>();
-                    previewTiles = new PaintableTile[width, height];
+                    previewTiles[i, j] = tile;
                 }
             }
         }
@@ -156,8 +158,35 @@ namespace Editor
 
         private void SaveBoardToJSON()
         {
+            var data = new BoardData
+            {
+                name = boardName,
+                width = width,
+                height = height,
+                tiles = new List<TileData>()
+            };
+
+            for (int x = 0; x < width; x++)
+            {
+                for (int y = 0; y < height; y++)
+                {
+                    var tile = previewTiles[x, y];
+                    // Note for later: Currently saving EVERY tile.
+                    // Can actually just save every tile that's not a Rough tile
+                    // But this is easier for now.
+                    data.tiles.Add(new TileData
+                    {
+                        x = x,
+                        y = y,
+                        type = tile.tileDefinition.tileName
+                    });
+                }
+            }
             
-            
+            string path = EditorUtility.SaveFilePanel("Save Board", "Assets/Boards", "Board", "json");
+            if (string.IsNullOrEmpty(path)) return;
+            File.WriteAllText(path, JsonUtility.ToJson(data, true));
+            AssetDatabase.Refresh();
         }
     }
 }
