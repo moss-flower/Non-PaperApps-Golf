@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     
     private List<Tile> activeTiles = new List<Tile>();
 
+    [SerializeField] private string boardName;
+
     
     
 
@@ -30,13 +32,15 @@ public class GameManager : MonoBehaviour
     {
         // Building board data and visuals
         GameObject boardRoot = new GameObject("Board");
-        board = boardFactory.CreateBoard(boardSize.x, boardSize.y, boardRoot.transform);
+        //board = boardFactory.CreateBoard(boardSize.x, boardSize.y, boardRoot.transform);
+        board = boardFactory.LoadBoardFromFile(boardName, boardRoot.transform);
         boardRoot.transform.position = calculateBoardOffset(boardSize);
         
         // Building Golf Ball Data
         // Will need to get info about start position etc later
-        GameObject ball = Instantiate(golfBallPrefab, board.tiles[0, 0].transform.position, new Quaternion());
+        GameObject ball = Instantiate(golfBallPrefab, board.tiles[0,0].transform.position, new Quaternion());
         golfBall = ball.GetComponent<GolfBall>();
+        MoveEvent(board.startTileLocation.x, board.startTileLocation.y);
         
         // Event Subscriptions
         EventManager.instance.OnTileClick += MoveEvent;

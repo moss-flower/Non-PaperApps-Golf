@@ -1,0 +1,190 @@
+{
+    "name": "test",
+    "width": 7,
+    "height": 5,
+    "tiles": [
+        {
+            "x": 0,
+            "y": 0,
+            "type": "Rough"
+        },
+        {
+            "x": 0,
+            "y": 1,
+            "type": "Rough"
+        },
+        {
+            "x": 0,
+            "y": 2,
+            "type": "Rough"
+        },
+        {
+            "x": 0,
+            "y": 3,
+            "type": "Rough"
+        },
+        {
+            "x": 0,
+            "y": 4,
+            "type": "Rough"
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "type": "Rough"
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "type": "Tee"
+        },
+        {
+            "x": 1,
+            "y": 2,
+            "type": "Rough"
+        },
+        {
+            "x": 1,
+            "y": 3,
+            "type": "Rough"
+        },
+        {
+            "x": 1,
+            "y": 4,
+            "type": "Rough"
+        },
+        {
+            "x": 2,
+            "y": 0,
+            "type": "Rough"
+        },
+        {
+            "x": 2,
+            "y": 1,
+            "type": "Rough"
+        },
+        {
+            "x": 2,
+            "y": 2,
+            "type": "Rough"
+        },
+        {
+            "x": 2,
+            "y": 3,
+            "type": "Rough"
+        },
+        {
+            "x": 2,
+            "y": 4,
+            "type": "Rough"
+        },
+        {
+            "x": 3,
+            "y": 0,
+            "type": "Rough"
+        },
+        {
+            "x": 3,
+            "y": 1,
+            "type": "Rough"
+        },
+        {
+            "x": 3,
+            "y": 2,
+            "type": "Rough"
+        },
+        {
+            "x": 3,
+            "y": 3,
+            "type": "Rough"
+        },
+        {
+            "x": 3,
+            "y": 4,
+            "type": "Rough"
+        },
+        {
+            "x": 4,
+            "y": 0,
+            "type": "Rough"
+        },
+        {
+            "x": 4,
+            "y": 1,
+            "type": "Rough"
+        },
+        {
+            "x": 4,
+            "y": 2,
+            "type": "Rough"
+        },
+        {
+            "x": 4,
+            "y": 3,
+            "type": "Rough"
+        },
+        {
+            "x": 4,
+            "y": 4,
+            "type": "Rough"
+        },
+        {
+            "x": 5,
+            "y": 0,
+            "type": "Rough"
+        },
+        {
+            "x": 5,
+            "y": 1,
+            "type": "Rough"
+        },
+        {
+            "x": 5,
+            "y": 2,
+            "type": "Rough"
+        },
+        {
+            "x": 5,
+            "y": 3,
+            "type": "Flag"
+        },
+        {
+            "x": 5,
+            "y": 4,
+            "type": "Rough"
+        },
+        {
+            "x": 6,
+            "y": 0,
+            "type": "Rough"
+        },
+        {
+            "x": 6,
+            "y": 1,
+            "type": "Rough"
+        },
+        {
+            "x": 6,
+            "y": 2,
+            "type": "Rough"
+        },
+        {
+            "x": 6,
+            "y": 3,
+            "type": "Rough"
+        },
+        {
+            "x": 6,
+            "y": 4,
+            "type": "Rough"
+        }
+    ],
+    "winTileLocation": {
+        "x": 5,
+        "y": 3
+    },
+    "startTileLocation": {
+        "x": 1,
+        "y": 1
+    }
+}

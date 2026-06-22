@@ -174,6 +174,16 @@ namespace Editor
                     // Note for later: Currently saving EVERY tile.
                     // Can actually just save every tile that's not a Rough tile
                     // But this is easier for now.
+                    if (tile.tileDefinition.isStartingTile)
+                    {
+                        data.startTileLocation = new Vector2Int(x, y);
+                    }
+
+                    if (tile.tileDefinition.isWinningTile)
+                    {
+                        data.winTileLocation = new Vector2Int(x, y);
+                    }
+                    
                     data.tiles.Add(new TileData
                     {
                         x = x,
