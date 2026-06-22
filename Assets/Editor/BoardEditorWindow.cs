@@ -176,12 +176,12 @@ namespace Editor
                     // But this is easier for now.
                     if (tile.tileDefinition.isStartingTile)
                     {
-                        data.startTileLocation = (x, y);
+                        data.startTileLocation = new Vector2Int(x, y);
                     }
 
                     if (tile.tileDefinition.isWinningTile)
                     {
-                        data.winTileLocation = (x, y);
+                        data.winTileLocation = new Vector2Int(x, y);
                     }
                     
                     data.tiles.Add(new TileData

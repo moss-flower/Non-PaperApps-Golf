@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 [System.Serializable]
 public class BoardData
@@ -7,6 +8,6 @@ public class BoardData
     public int width;
     public int height;
     public List<TileData> tiles;
-    public (int, int) winTileLocation;
-    public (int, int) startTileLocation;
+    public Vector2Int winTileLocation;
+    public Vector2Int startTileLocation;
 }

@@ -62,8 +62,8 @@ public class BoardFactory : MonoBehaviour
             tileComponent.Initialize(ParseTileDefinition(data.type),  data.x, data.y);
             board.tiles[data.x,data.y] = tileComponent;
         }
-        board.startTileLocation = convertBoardDataInfoToVector2Int(boardData.startTileLocation);
-        board.winTileLocation = convertBoardDataInfoToVector2Int(boardData.winTileLocation);
+        board.startTileLocation = boardData.startTileLocation;
+        board.winTileLocation = boardData.winTileLocation;
         return board;
     }
 

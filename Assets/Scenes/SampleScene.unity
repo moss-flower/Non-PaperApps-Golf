@@ -979,7 +979,7 @@ MonoBehaviour:
   boardFactory: {fileID: 1413315690}
   boardSize: {x: 26, y: 16}
   golfBallPrefab: {fileID: 170716089635760729, guid: 5ef6e351ac57359d98772c4d152df3c1, type: 3}
-  boardName: hole_2
+  boardName: test
 --- !u!4 &1413315692
 Transform:
   m_ObjectHideFlags: 0
