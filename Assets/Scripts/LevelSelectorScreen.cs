@@ -19,10 +19,17 @@ public class LevelSelectorScreen : MonoBehaviour
     private int selectedLevel = -1;
     private GameObject levelListParent;
     public event Action<int> onLevelConfirmed;
+    
+    [SerializeField] GameManager gameManager;
 
 
     private void Initialize()
     {
+        if (gameManager == null)
+        {
+            print("[LevelSelectorScreen.cs] HEY, ASSIGN THE GAME MANAGER!");
+        }
+        selectedLevel = -1;
         viewport.SetActive(true);
         if (levelListParent != null)
         {
@@ -93,7 +100,7 @@ public class LevelSelectorScreen : MonoBehaviour
 
     public void OnClick(int level)
     {
-        print(level);
+        selectLevel(level);
     }
     
     

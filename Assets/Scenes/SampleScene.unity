@@ -1993,7 +1993,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1413315690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2173,6 +2173,7 @@ MonoBehaviour:
   levelButtonPrefab: {fileID: 8557400849849690851, guid: 58397d42d35329d46942a3ce0cd0a5e4, type: 3}
   viewport: {fileID: 1868985156}
   levelListHolderPrefab: {fileID: 8463585472602700616, guid: 9f8cabe04bc95bbbeb8216951285dc72, type: 3}
+  gameManager: {fileID: 1413315691}
 --- !u!1 &1868985156
 GameObject:
   m_ObjectHideFlags: 0
