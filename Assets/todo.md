@@ -8,3 +8,4 @@ updated: july 6th 2026
 - [ ] do a design pass for the UI lol
 - [ ] Restrict the games window (consider building vertically like the original! Not every game needs to use the entire horizontal viewspace)
 - [ ] Start an animation phase
+- [ ] Add the ability to open a menu and the ability to "leave" the game.

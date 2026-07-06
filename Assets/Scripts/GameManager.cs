@@ -22,9 +22,7 @@ public class GameManager : MonoBehaviour
     
     // Events
     public static event Action OnGameStart;
-    
-    
-    
+    public event Action<int> OnScoreChanged;
     
 
     private void Awake()
@@ -74,6 +72,11 @@ public class GameManager : MonoBehaviour
         applyTileEffect(selectedTile);
         
         gameState.incrementScore();
+        if (OnScoreChanged != null)
+        {
+            OnScoreChanged.Invoke(gameState.getScore());
+        }
+        
     }
 
     private Vector3 calculateBoardOffset(Vector2Int boardSize)

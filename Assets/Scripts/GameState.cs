@@ -29,4 +29,9 @@ public class GameState
     {
         RemainingMulligans--;
     }
+
+    public int getScore()
+    {
+        return Score;
+    }
 }
