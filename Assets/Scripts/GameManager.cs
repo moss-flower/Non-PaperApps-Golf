@@ -32,6 +32,12 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        
+    }
+
+    public void Load(string level)
+    {
+        boardName = level;
         // Building board data and visuals
         GameObject boardRoot = new GameObject("Board");
         //board = boardFactory.CreateBoard(boardSize.x, boardSize.y, boardRoot.transform);

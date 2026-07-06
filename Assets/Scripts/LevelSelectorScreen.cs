@@ -18,7 +18,7 @@ public class LevelSelectorScreen : MonoBehaviour
     
     private int selectedLevel = -1;
     private GameObject levelListParent;
-    public event Action<int> onLevelConfirmed;
+    private List<BoardInfo> boards;
     
     [SerializeField] GameManager gameManager;
 
@@ -51,25 +51,29 @@ public class LevelSelectorScreen : MonoBehaviour
 
     public void OnConfirmedClicked()
     {
-        if (onLevelConfirmed != null && selectedLevel != -1)
+        if (selectedLevel == -1)
         {
-            onLevelConfirmed?.Invoke(selectedLevel);
+            return;
         }
-        
+        var levelName = boards[selectedLevel].path;
+        if (levelName != "")
+        {
+            gameManager.Load(levelName);
+        }
     }
 
     private List<BoardInfo> LoadMapMetaData()
     {
-        List<BoardInfo> boards = new List<BoardInfo>();
+        List<BoardInfo> boardInfos = new List<BoardInfo>();
 
         TextAsset[] files = Resources.LoadAll<TextAsset>("Maps");
         foreach (var file in files)
         {
             BoardInfo info = JsonUtility.FromJson<BoardInfo>(file.text);
             info.path = file.name;
-            boards.Add(info);
+            boardInfos.Add(info);
         }
-        return boards;
+        return boardInfos;
     }
 
     private void GenerateLevelList()
@@ -84,7 +88,7 @@ public class LevelSelectorScreen : MonoBehaviour
             throw new NullReferenceException("Missing: LevelButtonPrefab");
         }
         
-        List<BoardInfo> boards = LoadMapMetaData();
+        boards = LoadMapMetaData();
         if (boards.Count == 0)
         {
             return;
