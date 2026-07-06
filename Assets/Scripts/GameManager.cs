@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private BoardFactory boardFactory;
     [SerializeField] private Vector2Int boardSize = new Vector2Int(26, 16);
     public Board board { get; private set; }
+    [SerializeField] private string boardName;
     
     public GameState gameState { get; private set; } = new GameState();
     
@@ -17,11 +18,12 @@ public class GameManager : MonoBehaviour
     
     // Rolling related stuff
     private DiceRoller diceRoller;
-    
     private List<Tile> activeTiles = new List<Tile>();
-
-    [SerializeField] private string boardName;
-
+    
+    // Events
+    public static event Action OnGameStart;
+    
+    
     
     
 
@@ -55,6 +57,8 @@ public class GameManager : MonoBehaviour
         // Event Subscriptions
         EventManager.instance.OnTileClick += MoveEvent;
         EventManager.instance.OnRoleClick += HandleRoll;
+        
+        OnGameStart?.Invoke();
     }
 
     private void MoveEvent(int x, int y)

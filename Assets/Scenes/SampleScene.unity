@@ -2533,7 +2533,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1413315690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2569,8 +2569,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   boardFactory: {fileID: 1413315690}
   boardSize: {x: 26, y: 16}
-  golfBallPrefab: {fileID: 170716089635760729, guid: 5ef6e351ac57359d98772c4d152df3c1, type: 3}
   boardName: hole_2
+  golfBallPrefab: {fileID: 170716089635760729, guid: 5ef6e351ac57359d98772c4d152df3c1, type: 3}
 --- !u!4 &1413315692
 Transform:
   m_ObjectHideFlags: 0
@@ -2716,6 +2716,53 @@ MonoBehaviour:
   viewport: {fileID: 1868985156}
   levelListHolderPrefab: {fileID: 8463585472602700616, guid: 9f8cabe04bc95bbbeb8216951285dc72, type: 3}
   gameManager: {fileID: 1413315691}
+--- !u!1 &1803454299
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1803454301}
+  - component: {fileID: 1803454300}
+  m_Layer: 0
+  m_Name: UI Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1803454300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803454299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12e498ee3745428594985c427266ae93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIManager
+  gameManager: {fileID: 1413315691}
+  menuManager: {fileID: 720024013}
+  gameUI: {fileID: 1423680543}
+--- !u!4 &1803454301
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803454299}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 561.7064, y: 249.20299, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1868985156
 GameObject:
   m_ObjectHideFlags: 0
@@ -3184,5 +3231,6 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 1413315692}
   - {fileID: 1333150752}
+  - {fileID: 1803454301}
   - {fileID: 720024012}
   - {fileID: 436711689}
