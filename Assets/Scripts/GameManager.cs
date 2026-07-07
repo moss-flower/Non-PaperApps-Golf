@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private BoardFactory boardFactory;
     [SerializeField] private Vector2Int boardSize = new Vector2Int(26, 16);
     public Board board { get; private set; }
+    [SerializeField] private string boardName;
+    
+    public GameState gameState { get; private set; } = new GameState();
     
     // Golf ball related stuff
     [SerializeField] private GameObject golfBallPrefab;
@@ -15,12 +18,11 @@ public class GameManager : MonoBehaviour
     
     // Rolling related stuff
     private DiceRoller diceRoller;
-    
     private List<Tile> activeTiles = new List<Tile>();
-
-    [SerializeField] private string boardName;
-
     
+    // Events
+    public static event Action OnGameStart;
+    public event Action<int> OnScoreChanged;
     
 
     private void Awake()
@@ -30,6 +32,12 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        
+    }
+
+    public void Load(string level)
+    {
+        boardName = level;
         // Building board data and visuals
         GameObject boardRoot = new GameObject("Board");
         //board = boardFactory.CreateBoard(boardSize.x, boardSize.y, boardRoot.transform);
@@ -42,9 +50,13 @@ public class GameManager : MonoBehaviour
         golfBall = ball.GetComponent<GolfBall>();
         MoveEvent(board.startTileLocation.x, board.startTileLocation.y);
         
+        gameState.decrementScore();
+        
         // Event Subscriptions
         EventManager.instance.OnTileClick += MoveEvent;
         EventManager.instance.OnRoleClick += HandleRoll;
+        
+        OnGameStart?.Invoke();
     }
 
     private void MoveEvent(int x, int y)
@@ -58,6 +70,13 @@ public class GameManager : MonoBehaviour
         Vector3 newPosition = selectedTile.transform.position;
         golfBall.move(newPosition, new Vector2Int(x,y));
         applyTileEffect(selectedTile);
+        
+        gameState.incrementScore();
+        if (OnScoreChanged != null)
+        {
+            OnScoreChanged.Invoke(gameState.getScore());
+        }
+        
     }
 
     private Vector3 calculateBoardOffset(Vector2Int boardSize)

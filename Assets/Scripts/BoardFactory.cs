@@ -35,8 +35,8 @@ public class BoardFactory : MonoBehaviour
 
     public Board LoadBoardFromFile(string path, Transform parent)
     {
-        
-        TextAsset jsonFile = Resources.Load<TextAsset>(path);
+        var path_complete = "Maps/" + path;
+        TextAsset jsonFile = Resources.Load<TextAsset>(path_complete);
         if (jsonFile == null)
         {
             Debug.LogError($"File {path} does not exist");

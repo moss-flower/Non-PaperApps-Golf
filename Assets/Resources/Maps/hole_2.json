@@ -2083,5 +2083,13 @@
             "y": 15,
             "type": "Rough"
         }
-    ]
+    ],
+    "winTileLocation": {
+        "x": 19,
+        "y": 3
+    },
+    "startTileLocation": {
+        "x": 3,
+        "y": 3
+    }
 }
