@@ -107,3 +107,6 @@ InitTestScene*.unity*
 
 # Unmodified vendor packages and samples
 /[Aa]ssets/[Ss]amples/
+
+#default idea packages
+.idea/
