@@ -103,8 +103,18 @@ public class GameManager : MonoBehaviour
         {
             bool isBlocked = false;
             
+            //first check whether or not we can put, and if we can, wether the put is a playable tile.
+            Vector2Int pos = root + (direction);
+            if (golfBall.canPutt)
+            {
+                if (board.isInBoundsAndIsTartetable(pos))
+                {
+                    makeClickableAndAddTile(board.getTile(pos));
+                }
+            }
+            
             // First check whether the final spot is even a valid target, if not, continue.
-            Vector2Int pos = root + (direction * roll);
+            pos  = root + (direction * roll);
             if (!board.isInBoundsAndIsTartetable(pos))
             {
                 continue;
