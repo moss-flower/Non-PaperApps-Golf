@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     // Events
     public static event Action OnGameStart;
     public event Action<int> OnScoreChanged;
+    public event Action<int> OnRoll;
     
 
     private void Awake()
@@ -89,6 +90,7 @@ public class GameManager : MonoBehaviour
     private void HandleRoll()
     {
         int roll = diceRoller.Roll() + golfBall.modifier;
+        OnRoll?.Invoke(roll - golfBall.modifier);
         print("Roll: " + roll);
         resetTiles();
         checkAvailableTiles(roll);
