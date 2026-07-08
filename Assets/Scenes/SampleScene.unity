@@ -956,7 +956,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &472296201
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1126,13 +1126,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 69b099e4a38cb42e79f4f81e28e9f61b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraController
-  cam_pan_speed: 5
-  cam_zoom_speed: 3
+  cam_pan_speed: 0
+  cam_zoom_speed: 0
 --- !u!1 &566270759
 GameObject:
   m_ObjectHideFlags: 0
@@ -1952,7 +1952,7 @@ GameObject:
   - component: {fileID: 962136145}
   - component: {fileID: 962136144}
   m_Layer: 0
-  m_Name: ScoreText
+  m_Name: RollText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2911,7 +2911,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1423680544
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2949,6 +2949,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScoreboardManager
   gameManager: {fileID: 1413315691}
   scoreText: {fileID: 4173844}
+  rollText: {fileID: 962136144}
 --- !u!1 &1525718499
 GameObject:
   m_ObjectHideFlags: 0
