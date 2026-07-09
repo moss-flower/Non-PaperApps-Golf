@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     public static event Action OnGameStart;
     public event Action<int> OnScoreChanged;
     public event Action<int> OnRoll;
+    public event Action OnRoundEnd;
     
 
     private void Awake()
@@ -76,6 +77,11 @@ public class GameManager : MonoBehaviour
         if (OnScoreChanged != null)
         {
             OnScoreChanged.Invoke(gameState.getScore());
+        }
+        
+        if (selectedTile.tileDefinition.isWinningTile)
+        {
+            OnRoundEnd?.Invoke();
         }
         
     }
