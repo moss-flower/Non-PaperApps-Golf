@@ -110,3 +110,16 @@ InitTestScene*.unity*
 
 #default idea packages
 .idea/
+
+#vim files
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-v][a-z]
+[._}sw[a-p]
+
+*~
+*.bak
+
+[._]*.un~
+
+tags

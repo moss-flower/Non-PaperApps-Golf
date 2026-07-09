@@ -11,6 +11,8 @@ public class UIManager : MonoBehaviour
     //updates and transitioning between scenes. (Eg, a universal update call so that the UI manager didn't have to care)
     //for the time being we'll do it manually
     
+    //we can use this to trigger the round over screen on round win
+    
     void OnEnable()
     {
         GameManager.OnGameStart += LoadGameUI;

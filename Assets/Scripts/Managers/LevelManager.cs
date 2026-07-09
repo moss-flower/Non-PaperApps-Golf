@@ -2,6 +2,12 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
+public struct BoardInfo
+{
+    public String name;
+    public String path;
+}
+
 public class LevelManager : MonoBehaviour
 {
     [SerializeField] GameManager gameManager;
@@ -49,6 +55,15 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    public List<BoardInfo> GetMapData()
+    {
+        if (levels == null)
+        {
+            return null;
+        }
+        return levels;
+    }
+
     private List<BoardInfo> LoadMapMetaData()
     {
         List<BoardInfo> boards = new List<BoardInfo>();
@@ -62,12 +77,23 @@ public class LevelManager : MonoBehaviour
         }
         return boards;
     }
-    private void nextLevel()
+
+    public void SelectLevel(int level)
+    {
+        currentLevelIndex = level;
+        var levelPath = levels[currentLevelIndex].path;
+        if (levelPath != "")
+        {
+            gameManager.Load(levelPath);
+        }
+    }
+    
+    public void nextLevel()
     {
         currentLevelIndex++;
         if (currentLevelIndex >= levels.Count)
         {
-            //should probably figure out what to do with these edge cases
+            //should probably figure out what to do with this
             return;
         }
         currentLevel = levels[currentLevelIndex];

@@ -9,7 +9,7 @@ public class InputHandler : MonoBehaviour
     private InputAction panAction;
     private InputAction zoomAction;
 
-    private void Start()
+    private void Awake()
     {
         panAction = InputSystem.actions.FindAction("Pan");
         zoomAction = InputSystem.actions.FindAction("Zoom");

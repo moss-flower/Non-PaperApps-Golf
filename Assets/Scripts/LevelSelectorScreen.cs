@@ -3,12 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-struct BoardInfo
-{
-    public String name;
-    public String path;
-}
-
 public class LevelSelectorScreen : MonoBehaviour
 {
 
@@ -16,35 +10,36 @@ public class LevelSelectorScreen : MonoBehaviour
     [SerializeField] private GameObject viewport;
     [SerializeField] private GameObject levelListHolderPrefab;
     
+    [SerializeField] private LevelManager levelManager;
+    
     private int selectedLevel = -1;
     private GameObject levelListParent;
-    private List<BoardInfo> boards;
-    
-    [SerializeField] GameManager gameManager;
 
-
-    private void Initialize()
+    private void OnEnable()
     {
-        if (gameManager == null)
+        if (levelManager == null)
         {
-            print("[LevelSelectorScreen.cs] HEY, ASSIGN THE GAME MANAGER!");
+            print("[LevelSelectorScreen.cs] HEY, ASSIGN THE LEVEL MANAGER!");
+            return;
         }
-        selectedLevel = -1;
+
+        var levels = levelManager.GetMapData();
         viewport.SetActive(true);
-        if (levelListParent != null)
+        if (levels == null)
         {
-            Destroy(levelListParent);
+            return;
         }
-        levelListParent = Instantiate(levelListHolderPrefab, viewport.transform);
-        GenerateLevelList();
-    }
-    
-    private void Awake()
-    {
-        Initialize();
+        GenerateLevelList(levels);
     }
 
-    public void selectLevel(int level)
+    private void OnDisable()
+    {;
+        Destroy(levelListParent);
+        viewport.SetActive(false);
+        selectedLevel = -1;
+    }
+
+    public void SelectLevel(int level)
     {
         selectedLevel = level;
     }
@@ -55,40 +50,23 @@ public class LevelSelectorScreen : MonoBehaviour
         {
             return;
         }
-        var levelName = boards[selectedLevel].path;
-        if (levelName != "")
-        {
-            gameManager.Load(levelName);
-        }
+        levelManager.SelectLevel(selectedLevel);
     }
 
-    private List<BoardInfo> LoadMapMetaData()
+    private void GenerateLevelList(List<BoardInfo> boards)
     {
-        List<BoardInfo> boardInfos = new List<BoardInfo>();
-
-        TextAsset[] files = Resources.LoadAll<TextAsset>("Maps");
-        foreach (var file in files)
+        
+        if (levelListParent != null)
         {
-            BoardInfo info = JsonUtility.FromJson<BoardInfo>(file.text);
-            info.path = file.name;
-            boardInfos.Add(info);
+            Destroy(levelListParent);
         }
-        return boardInfos;
-    }
-
-    private void GenerateLevelList()
-    {
-        if (levelListParent == null)
-        {
-            Initialize();
-        }
+        levelListParent = Instantiate(levelListHolderPrefab, viewport.transform);
 
         if (levelButtonPrefab == null)
         {
             throw new NullReferenceException("Missing: LevelButtonPrefab");
         }
         
-        boards = LoadMapMetaData();
         if (boards.Count == 0)
         {
             return;
@@ -104,7 +82,7 @@ public class LevelSelectorScreen : MonoBehaviour
 
     public void OnClick(int level)
     {
-        selectLevel(level);
+        SelectLevel(level);
     }
     
     

@@ -3,6 +3,8 @@ using UnityEngine;
 public class MenuManager : MonoBehaviour
 {
 
+    //TODO: add "overlay" hierarchy list that allows for displaying several UI components over one another.
+    
     private GameObject activeMenu;
     [SerializeField] private GameObject mainMenu;
     void Awake()
