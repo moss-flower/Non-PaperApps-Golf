@@ -39,6 +39,18 @@ public class GameManager : MonoBehaviour
         
     }
 
+    private void OnEnable()
+    {
+        EventManager.instance.OnTileClick += MoveEvent;
+        EventManager.instance.OnRoleClick += HandleRoll;
+    }
+
+    private void OnDisable()
+    {
+        EventManager.instance.OnTileClick -= MoveEvent;
+        EventManager.instance.OnRoleClick -= HandleRoll;
+    }
+
     public void Load(string level)
     {
         boardName = level;
@@ -66,8 +78,7 @@ public class GameManager : MonoBehaviour
         gameState.decrementScore();
         
         // Event Subscriptions
-        EventManager.instance.OnTileClick += MoveEvent;
-        EventManager.instance.OnRoleClick += HandleRoll;
+        
         
         OnGameStart?.Invoke();
     }

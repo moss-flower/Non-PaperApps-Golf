@@ -15,3 +15,12 @@ updated: july 9th 2026
 - [ ] Add dice rolling animation and dynamic result animation
 - [ ] Fix Tiles, Golf Ball, Etc.
 - [ ] Add music
+
+---
+
+July 13th 2026
+- The shot counter isn't working correctly. Seems to add the shot count rather than incrementing by one per shot.
+- Scroll bar in level selection doesn't work. Should rework that menu anyway.
+- Replace main menu graphic with real tiles
+- Fix color on main menu wave
+- 
