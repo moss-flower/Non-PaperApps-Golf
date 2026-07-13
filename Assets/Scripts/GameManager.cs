@@ -9,11 +9,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Vector2Int boardSize = new Vector2Int(26, 16);
     public Board board { get; private set; }
     [SerializeField] private string boardName;
+    private GameObject boardRoot;
     
     public GameState gameState { get; private set; } = new GameState();
     
     // Golf ball related stuff
     [SerializeField] private GameObject golfBallPrefab;
+    private GameObject golfBallGameObject;
     private GolfBall golfBall;
     
     // Rolling related stuff
@@ -41,15 +43,24 @@ public class GameManager : MonoBehaviour
     {
         boardName = level;
         // Building board data and visuals
-        GameObject boardRoot = new GameObject("Board");
+        if (boardRoot != null)
+        {
+            Destroy(boardRoot);
+        }
+        boardRoot = new GameObject("Board");
         //board = boardFactory.CreateBoard(boardSize.x, boardSize.y, boardRoot.transform);
         board = boardFactory.LoadBoardFromFile(boardName, boardRoot.transform);
         boardRoot.transform.position = calculateBoardOffset(boardSize);
         
         // Building Golf Ball Data
         // Will need to get info about start position etc later
-        GameObject ball = Instantiate(golfBallPrefab, board.tiles[0,0].transform.position, new Quaternion());
-        golfBall = ball.GetComponent<GolfBall>();
+
+        if (golfBallGameObject != null)
+        {
+            Destroy(golfBallGameObject);
+        }
+        golfBallGameObject = Instantiate(golfBallPrefab, board.tiles[0,0].transform.position, new Quaternion());
+        golfBall = golfBallGameObject.GetComponent<GolfBall>();
         MoveEvent(board.startTileLocation.x, board.startTileLocation.y);
         
         gameState.decrementScore();
