@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class RoundEndController : MonoBehaviour
@@ -8,11 +9,13 @@ public class RoundEndController : MonoBehaviour
 
     public void OnNextLevel()
     {
+        if(levelManager == null){return;}
         levelManager.nextLevel();
     }
 
     public void OnMainMenu()
     {
+        if(menuManager == null){return;}
         menuManager.Open(mainMenuUI);
     }
 }
