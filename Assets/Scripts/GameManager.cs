@@ -41,14 +41,12 @@ public class GameManager : MonoBehaviour
 
     private void OnEnable()
     {
-        EventManager.instance.OnTileClick += MoveEvent;
-        EventManager.instance.OnRoleClick += HandleRoll;
+        
     }
 
     private void OnDisable()
     {
-        EventManager.instance.OnTileClick -= MoveEvent;
-        EventManager.instance.OnRoleClick -= HandleRoll;
+        
     }
 
     public void Load(string level)
@@ -75,15 +73,17 @@ public class GameManager : MonoBehaviour
         golfBall = golfBallGameObject.GetComponent<GolfBall>();
         MoveEvent(board.startTileLocation.x, board.startTileLocation.y);
         
-        gameState.decrementScore();
+        gameState.reset();
+        
         
         // Event Subscriptions
-        
-        
+        //Order matters here. If the game is not started, the game UI won't be enabled and cannot be updated
+        //This causes it to render the last rendered score, which is silly.
         OnGameStart?.Invoke();
+        OnScoreChanged?.Invoke(gameState.getScore());
     }
 
-    private void MoveEvent(int x, int y)
+    public void MoveEvent(int x, int y)
     {
         if (activeTiles.Count > 0)
         {
@@ -115,7 +115,7 @@ public class GameManager : MonoBehaviour
         return new Vector3(-x, -y, 0);
     }
 
-    private void HandleRoll()
+    public void HandleRoll()
     {
         int roll = diceRoller.Roll() + golfBall.modifier;
         OnRoll?.Invoke(roll - golfBall.modifier);
