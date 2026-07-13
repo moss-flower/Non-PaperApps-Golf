@@ -5,6 +5,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameManager gameManager;
     [SerializeField] private MenuManager menuManager;
     [SerializeField] private GameObject gameUI;
+    [SerializeField] private GameObject roundEndController;
 
     
     //note, this is where we could technically use an interface and swappable components to handle
@@ -16,14 +17,21 @@ public class UIManager : MonoBehaviour
     void OnEnable()
     {
         GameManager.OnGameStart += LoadGameUI;
+        gameManager.OnRoundEnd += LoadEndRoundUI;
     }
     void OnDisable()
     {
         GameManager.OnGameStart -= LoadGameUI;
+        gameManager.OnRoundEnd -= LoadEndRoundUI;
     }
 
     void LoadGameUI()
     {
         menuManager.Open(gameUI);
+    }
+
+    void LoadEndRoundUI()
+    {
+        menuManager.Open(roundEndController);
     }
 }
