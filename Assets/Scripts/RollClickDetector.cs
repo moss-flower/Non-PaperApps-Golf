@@ -1,10 +1,11 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class RollClickDetector : MonoBehaviour
 {
-    [SerializeField] private EventManager eventManager;
+    [FormerlySerializedAs("eventManager")] [SerializeField] private GameEventHandler gameEventHandler;
     public void OnRoleClick()
     {
-        eventManager.OnClickRole();
+        gameEventHandler.OnClickRole();
     }
 }

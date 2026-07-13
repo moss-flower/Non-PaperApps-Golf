@@ -1349,7 +1349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bfef6e621644af391e3940b7fb6892e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EventManager
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 1413315691}
 --- !u!4 &436711689
 Transform:
   m_ObjectHideFlags: 0
@@ -1511,7 +1511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a56f476db0844d6a88e5ad8e45b79783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RollClickDetector
-  eventManager: {fileID: 0}
+  gameEventHandler: {fileID: 436711688}
 --- !u!1 &472296200
 GameObject:
   m_ObjectHideFlags: 0
@@ -4719,7 +4719,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bdf985ee5c9e6e993b40a78d4cd4485f, type: 2}
   - {fileID: 11400000, guid: 36264eee7d21c6ca29a4080c1d0e7ae4, type: 2}
   - {fileID: 11400000, guid: 24f6b4380813cf214a0846c7ce4ee957, type: 2}
-  eventManager: {fileID: 0}
+  gameEventHandler: {fileID: 436711688}
 --- !u!4 &1775649536
 Transform:
   m_ObjectHideFlags: 0

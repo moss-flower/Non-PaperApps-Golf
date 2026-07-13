@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = System.Random;
 
 public class BoardFactory : MonoBehaviour
@@ -11,7 +12,7 @@ public class BoardFactory : MonoBehaviour
     public TileDefinition[] tileDefinitions;
 
     private Dictionary<string, TileDefinition> _dictionary;
-    [SerializeField] private EventManager eventManager;
+    [FormerlySerializedAs("eventManager")] [SerializeField] private GameEventHandler gameEventHandler;
     
     public Board CreateBoard(int width, int height, Transform parent)
     {
@@ -27,7 +28,7 @@ public class BoardFactory : MonoBehaviour
             {
                 GameObject tile = Instantiate(tilePrefab, new Vector3(i*0.5f, j*0.5f, 0), Quaternion.identity, parent);
                 Tile tileComponent = tile.GetComponent<Tile>();
-                tileComponent.Initialize(tileDefinitions[random.Next(tileDefinitions.Length)], i, j, eventManager);
+                tileComponent.Initialize(tileDefinitions[random.Next(tileDefinitions.Length)], i, j, gameEventHandler);
                 board.tiles[i, j] = tileComponent;
             }
         }
@@ -60,7 +61,7 @@ public class BoardFactory : MonoBehaviour
         {
             GameObject tile = Instantiate(tilePrefab, new Vector3(data.x*0.5f, data.y*0.5f, 0), Quaternion.identity, parent);
             Tile tileComponent = tile.GetComponent<Tile>();
-            tileComponent.Initialize(ParseTileDefinition(data.type),  data.x, data.y, eventManager);
+            tileComponent.Initialize(ParseTileDefinition(data.type),  data.x, data.y, gameEventHandler);
             board.tiles[data.x,data.y] = tileComponent;
         }
         board.startTileLocation = boardData.startTileLocation;
