@@ -1349,6 +1349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bfef6e621644af391e3940b7fb6892e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EventManager
+  gameManager: {fileID: 0}
 --- !u!4 &436711689
 Transform:
   m_ObjectHideFlags: 0
@@ -1510,6 +1511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a56f476db0844d6a88e5ad8e45b79783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RollClickDetector
+  eventManager: {fileID: 0}
 --- !u!1 &472296200
 GameObject:
   m_ObjectHideFlags: 0
@@ -4132,7 +4134,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1413315692}
   - component: {fileID: 1413315691}
-  - component: {fileID: 1413315690}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -4140,27 +4141,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1413315690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1413315689}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06deece98ac54f35a7472619fd09aae0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BoardFactory
-  tilePrefab: {fileID: 1475330706222410343, guid: 57ea709fa14ca575fb8dcdd82d5df3df, type: 3}
-  tileDefinitions:
-  - {fileID: 11400000, guid: 2bb77ef87a778fa99b15d3b4316a97ee, type: 2}
-  - {fileID: 11400000, guid: b967ef9dbbe839b0f971dc28299eff26, type: 2}
-  - {fileID: 11400000, guid: eafbfdd1f78743142aed0e5d7757b4df, type: 2}
-  - {fileID: 11400000, guid: 160c087d49eb86e2ba65eac45f57c07d, type: 2}
-  - {fileID: 11400000, guid: bdf985ee5c9e6e993b40a78d4cd4485f, type: 2}
-  - {fileID: 11400000, guid: 36264eee7d21c6ca29a4080c1d0e7ae4, type: 2}
-  - {fileID: 11400000, guid: 24f6b4380813cf214a0846c7ce4ee957, type: 2}
 --- !u!114 &1413315691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4173,7 +4153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9231fc2d32734aebae4275c6258c76ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  boardFactory: {fileID: 1413315690}
+  boardFactory: {fileID: 1775649535}
   boardSize: {x: 26, y: 16}
   boardName: hole_2
   golfBallPrefab: {fileID: 170716089635760729, guid: 5ef6e351ac57359d98772c4d152df3c1, type: 3}
@@ -4701,6 +4681,60 @@ MonoBehaviour:
   viewport: {fileID: 1868985156}
   levelListHolderPrefab: {fileID: 8463585472602700616, guid: 9f8cabe04bc95bbbeb8216951285dc72, type: 3}
   levelManager: {fileID: 1169821516}
+--- !u!1 &1775649534
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1775649536}
+  - component: {fileID: 1775649535}
+  m_Layer: 0
+  m_Name: BoardFactory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1775649535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775649534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06deece98ac54f35a7472619fd09aae0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BoardFactory
+  tilePrefab: {fileID: 1475330706222410343, guid: 57ea709fa14ca575fb8dcdd82d5df3df, type: 3}
+  tileDefinitions:
+  - {fileID: 11400000, guid: 2bb77ef87a778fa99b15d3b4316a97ee, type: 2}
+  - {fileID: 11400000, guid: b967ef9dbbe839b0f971dc28299eff26, type: 2}
+  - {fileID: 11400000, guid: eafbfdd1f78743142aed0e5d7757b4df, type: 2}
+  - {fileID: 11400000, guid: 160c087d49eb86e2ba65eac45f57c07d, type: 2}
+  - {fileID: 11400000, guid: bdf985ee5c9e6e993b40a78d4cd4485f, type: 2}
+  - {fileID: 11400000, guid: 36264eee7d21c6ca29a4080c1d0e7ae4, type: 2}
+  - {fileID: 11400000, guid: 24f6b4380813cf214a0846c7ce4ee957, type: 2}
+  eventManager: {fileID: 0}
+--- !u!4 &1775649536
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775649534}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 288, y: 480, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1775684872
 GameObject:
   m_ObjectHideFlags: 0
@@ -5763,6 +5797,7 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 1413315692}
+  - {fileID: 1775649536}
   - {fileID: 1333150752}
   - {fileID: 1803454301}
   - {fileID: 720024012}

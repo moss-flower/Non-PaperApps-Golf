@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Tile : MonoBehaviour, IClickable
 {
+    [SerializeField] private EventManager eventManager;
     public TileDefinition tileDefinition { get; private set; }
     public SpriteRenderer spriteRenderer { get; private set; }
     
@@ -10,8 +11,9 @@ public class Tile : MonoBehaviour, IClickable
     
     private bool isClickable = false;
     
-    public void Initialize(TileDefinition tileDefinition, int x, int y)
+    public void Initialize(TileDefinition tileDefinition, int x, int y, EventManager eventManager)
     {
+        this.eventManager = eventManager;
         this.tileDefinition = tileDefinition;
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = tileDefinition.sprite;
@@ -22,7 +24,7 @@ public class Tile : MonoBehaviour, IClickable
     {
         if (isClickable)
         {
-            EventManager.instance.OnClickEvent(coordinates.x, coordinates.y);
+            eventManager.OnClickEvent(coordinates.x, coordinates.y);
         }
         
     }
