@@ -19,8 +19,8 @@ updated: july 9th 2026
 ---
 
 July 13th 2026
-- The shot counter isn't working correctly. Seems to add the shot count rather than incrementing by one per shot.
-- Scroll bar in level selection doesn't work. Should rework that menu anyway.
-- Replace main menu graphic with real tiles
-- Fix color on main menu wave
-- 
+- [x] The shot counter isn't working correctly. Seems to add the shot count rather than incrementing by one per shot.
+- [ ] Scroll bar in level selection doesn't work. Should rework that menu anyway.
+- [ ] Replace main menu graphic with real tiles
+- [x] Fix color on main menu wave
+- [ ] Add a pause menu during game time.
