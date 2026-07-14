@@ -2,6 +2,8 @@ using UnityEngine;
 
 public interface IMenu
 {
+    
+    Transform transform { get; }
     public bool IsCovered();
     
     public bool IsOpen();
@@ -10,5 +12,5 @@ public interface IMenu
 
     public void Close();
 
-    public void Cover();
+    public void Cover(bool state);
 }
