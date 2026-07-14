@@ -38,32 +38,17 @@ public class GameManager : MonoBehaviour
 
     public void TogglePause()
     {
-        pauseState = !pauseState;
-        if (!IsPaused())
+        if (!gameState.HasStarted())
         {
             return;
         }
+        pauseState = !pauseState;
         OnPause?.Invoke();
     }
 
     private void Awake()
     {
         diceRoller = new DiceRoller();
-    }
-
-    private void Start()
-    {
-        
-    }
-
-    private void OnEnable()
-    {
-        
-    }
-
-    private void OnDisable()
-    {
-        
     }
 
     public void Load(string level)
@@ -90,7 +75,7 @@ public class GameManager : MonoBehaviour
         golfBall = golfBallGameObject.GetComponent<GolfBall>();
         MoveEvent(board.startTileLocation.x, board.startTileLocation.y);
         
-        gameState.reset();
+        gameState.startGame();
         
         
         // Event Subscriptions
@@ -120,6 +105,7 @@ public class GameManager : MonoBehaviour
         
         if (selectedTile.tileDefinition.isWinningTile)
         {
+            gameState.endGame();
             OnRoundEnd?.Invoke();
         }
         

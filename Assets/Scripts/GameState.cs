@@ -4,6 +4,24 @@ public class GameState
     private int Score { get; set; } = 0;
     private int RemainingMulligans { get; set; } = 3;
 
+    private bool hasStarted = false;
+
+    public void startGame()
+    {
+        reset();
+        hasStarted = true;
+    }
+
+    public void endGame()
+    {
+        hasStarted = false;
+    }
+
+    public bool HasStarted()
+    {
+        return hasStarted;
+    }
+    
     public void reset()
     {
         Score = 0;
