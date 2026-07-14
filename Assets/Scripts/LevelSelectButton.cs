@@ -7,18 +7,18 @@ public class LevelSelectButton : MonoBehaviour
     [SerializeField] TMP_Text levelNameText;
     [SerializeField] TMP_Text levelDescriptionText;
     private int index;
-    private LevelSelectorScreen levelSelectorScreen;
+    private LevelSelectorMenu levelSelectorMenu;
     
-    public void InitializeButton(string name, int index, LevelSelectorScreen screen)
+    public void InitializeButton(string name, int index, LevelSelectorMenu menu)
     {
         levelNameText.text = name;
         this.index = index;
         levelDescriptionText.text = index.ToString();
-        levelSelectorScreen = screen;
+        levelSelectorMenu = menu;
     }
 
     public void OnClick()
     {
-        levelSelectorScreen.OnClick(index);
+        levelSelectorMenu.OnClick(index);
     }
 }

@@ -1,9 +1,9 @@
 using System;
 using UnityEngine;
 
-public class RoundEndController : MonoBehaviour
+public class RoundEndController : Menu
 {
-    [SerializeField] private GameObject mainMenuUI;
+    [SerializeField] private Menu mainMenuUI;
     [SerializeField] private MenuManager menuManager;
     [SerializeField] private LevelManager levelManager;
 

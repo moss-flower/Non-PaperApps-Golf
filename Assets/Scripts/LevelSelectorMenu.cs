@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class LevelSelectorScreen : MonoBehaviour
+public class LevelSelectorMenu : Menu
 {
-
+    
     [SerializeField] private GameObject levelButtonPrefab;
     [SerializeField] private GameObject viewport;
     [SerializeField] private GameObject levelListHolderPrefab;
@@ -84,7 +84,5 @@ public class LevelSelectorScreen : MonoBehaviour
     {
         SelectLevel(level);
     }
-    
-    
 }
 

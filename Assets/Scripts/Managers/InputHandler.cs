@@ -8,11 +8,15 @@ public class InputHandler : MonoBehaviour
 
     private InputAction panAction;
     private InputAction zoomAction;
+    private InputAction pauseAction;
+
+    public event Action OnPause;
 
     private void Awake()
     {
         panAction = InputSystem.actions.FindAction("Pan");
         zoomAction = InputSystem.actions.FindAction("Zoom");
+        pauseAction = InputSystem.actions.FindAction("Escape");
     }
 
     private void Update()
@@ -27,6 +31,11 @@ public class InputHandler : MonoBehaviour
         if (zoomValue != 0)
         {
             cam.Zoom(zoomValue);
+        }
+
+        if (pauseAction.triggered)
+        {
+            OnPause?.Invoke();
         }
     }
 }

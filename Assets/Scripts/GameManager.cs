@@ -21,32 +21,34 @@ public class GameManager : MonoBehaviour
     // Rolling related stuff
     private DiceRoller diceRoller;
     private List<Tile> activeTiles = new List<Tile>();
+
+    private bool pauseState = false;
     
     // Events
     public static event Action OnGameStart;
     public event Action<int> OnScoreChanged;
     public event Action<int> OnRoll;
     public event Action OnRoundEnd;
-    
+    public event Action OnPause;
+
+    public bool IsPaused()
+    {
+        return pauseState;
+    }
+
+    public void TogglePause()
+    {
+        if (!gameState.HasStarted())
+        {
+            return;
+        }
+        pauseState = !pauseState;
+        OnPause?.Invoke();
+    }
 
     private void Awake()
     {
         diceRoller = new DiceRoller();
-    }
-
-    private void Start()
-    {
-        
-    }
-
-    private void OnEnable()
-    {
-        
-    }
-
-    private void OnDisable()
-    {
-        
     }
 
     public void Load(string level)
@@ -73,7 +75,7 @@ public class GameManager : MonoBehaviour
         golfBall = golfBallGameObject.GetComponent<GolfBall>();
         MoveEvent(board.startTileLocation.x, board.startTileLocation.y);
         
-        gameState.reset();
+        gameState.startGame();
         
         
         // Event Subscriptions
@@ -103,6 +105,7 @@ public class GameManager : MonoBehaviour
         
         if (selectedTile.tileDefinition.isWinningTile)
         {
+            gameState.endGame();
             OnRoundEnd?.Invoke();
         }
         
