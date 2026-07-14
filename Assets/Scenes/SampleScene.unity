@@ -481,8 +481,8 @@ MonoBehaviour:
         m_MethodName: Open
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 472296200}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 472296202}
+          m_ObjectArgumentAssemblyTypeName: Menu, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1317,7 +1317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 222812aece485b39382896ebf99a7e01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoundEndController
-  mainMenuUI: {fileID: 472296200}
+  mainMenuUI: {fileID: 472296202}
   menuManager: {fileID: 720024013}
   levelManager: {fileID: 1169821516}
 --- !u!1 &436711687
@@ -1521,6 +1521,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 472296201}
+  - component: {fileID: 472296202}
   m_Layer: 0
   m_Name: MainMenu
   m_TagString: Untagged
@@ -1552,6 +1553,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &472296202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472296200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8267ecc556e24502ae3c53d2e96d55dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GenericMenu
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2418,7 +2431,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4ba1d0915c35231bafa5d8cb9ef0e04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuManager
-  mainMenu: {fileID: 472296200}
+  mainMenu: {fileID: 472296202}
+  displayRoot: {fileID: 720024008}
 --- !u!1 &744057153
 GameObject:
   m_ObjectHideFlags: 0
@@ -3329,8 +3343,8 @@ MonoBehaviour:
         m_MethodName: Open
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1623654179}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 1623654181}
+          m_ObjectArgumentAssemblyTypeName: Menu, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4218,6 +4232,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1423680544}
   - component: {fileID: 1423680545}
+  - component: {fileID: 1423680546}
   m_Layer: 0
   m_Name: GameUI
   m_TagString: Untagged
@@ -4263,6 +4278,18 @@ MonoBehaviour:
   gameManager: {fileID: 1413315691}
   scoreText: {fileID: 4173844}
   rollText: {fileID: 619612468}
+--- !u!114 &1423680546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423680543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8267ecc556e24502ae3c53d2e96d55dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GenericMenu
 --- !u!1 &1437681318
 GameObject:
   m_ObjectHideFlags: 0
@@ -4785,7 +4812,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.44233638, b: 0.0990566, a: 1}
+  m_Color: {r: 1, g: 0.47843137, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4917,8 +4944,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
   gameManager: {fileID: 1413315691}
   menuManager: {fileID: 720024013}
-  gameUI: {fileID: 1423680543}
-  roundEndController: {fileID: 415749343}
+  gameUI: {fileID: 1423680546}
+  roundEndController: {fileID: 415749345}
 --- !u!4 &1803454301
 Transform:
   m_ObjectHideFlags: 0
