@@ -40,6 +40,13 @@ public class UIManager : MonoBehaviour
 
     void TogglePauseMenu()
     {
-        menuManager.Open(pauseMenu);
+        if (gameManager.IsPaused())
+        {
+            menuManager.AddOverlay(pauseMenu);
+        }
+        else
+        {
+            menuManager.CloseOverlay();
+        }
     }
 }
