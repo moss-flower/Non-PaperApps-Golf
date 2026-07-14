@@ -4,8 +4,8 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField] private GameManager gameManager;
     [SerializeField] private MenuManager menuManager;
-    [SerializeField] private GameObject gameUI;
-    [SerializeField] private GameObject roundEndController;
+    [SerializeField] private Menu gameUI;
+    [SerializeField] private Menu roundEndController;
 
     
     //note, this is where we could technically use an interface and swappable components to handle

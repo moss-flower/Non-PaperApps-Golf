@@ -6,9 +6,9 @@ public class MenuManager : MonoBehaviour
 
     //TODO: add "overlay" hierarchy list that allows for displaying several UI components over one another.
     
-    private GameObject activeMenu;
-    private List<GameObject> overlays = new List<GameObject>();
-    [SerializeField] private GameObject mainMenu;
+    private Menu activeMenu;
+    private List<Menu> overlays = new List<Menu>();
+    [SerializeField] private Menu mainMenu;
     [SerializeField] private GameObject displayRoot;
     private GameObject activeOverlay;
     void Awake()
@@ -16,36 +16,40 @@ public class MenuManager : MonoBehaviour
         Open(mainMenu);
     }
 
-    public void Open(GameObject menu)
+    public void Open(Menu menu)
     {
         if (activeMenu != null)
         {
-            activeMenu.SetActive(false);
+            activeMenu.Close();
         }
         activeMenu = menu;
-        activeMenu.SetActive(true);
+        activeMenu.Open();
     }
 
-    public void AddOverlay(GameObject overlay)
+    public void AddOverlay(Menu overlay)
     {
+        if (activeMenu != null && !activeMenu.IsCovered())
+        {
+            activeMenu.IsCovered();
+        }
         overlays.Add(overlay);
         overlay.transform.SetParent(displayRoot.transform);
         overlay.transform.SetAsLastSibling();
-        overlay.SetActive(true);
+        overlay.Open();
     }
 
     public void CloseOverlay()
     {
         if (overlays.Count > 0)
         {
-            GameObject overlay = overlays[^1];
+            Menu overlay = overlays[^1];
             overlays.Remove(overlay);
-            overlay.SetActive(false);
+            overlay.Close();
         }
     }
 
     public void Close()
     {
-        activeMenu.SetActive(false);
+        activeMenu.Close();
     }
 }
