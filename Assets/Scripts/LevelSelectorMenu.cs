@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class LevelSelectorScreen : MonoBehaviour
+public class LevelSelectorMenu : MonoBehaviour
 {
 
     [SerializeField] private GameObject levelButtonPrefab;
