@@ -21,13 +21,30 @@ public class GameManager : MonoBehaviour
     // Rolling related stuff
     private DiceRoller diceRoller;
     private List<Tile> activeTiles = new List<Tile>();
+
+    private bool pauseState = false;
     
     // Events
     public static event Action OnGameStart;
     public event Action<int> OnScoreChanged;
     public event Action<int> OnRoll;
     public event Action OnRoundEnd;
-    
+    public event Action OnPause;
+
+    public bool IsPaused()
+    {
+        return pauseState;
+    }
+
+    public void TogglePause()
+    {
+        pauseState = !pauseState;
+        if (!IsPaused())
+        {
+            return;
+        }
+        OnPause?.Invoke();
+    }
 
     private void Awake()
     {
