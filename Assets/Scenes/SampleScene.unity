@@ -1406,6 +1406,8 @@ MonoBehaviour:
   levelManager: {fileID: 1169821516}
   gameManager: {fileID: 1413315691}
   roundEndText: {fileID: 191532745}
+  par_num_Text: {fileID: 1327150164}
+  calculated_par_result_Text: {fileID: 745104477}
 --- !u!1 &436711687
 GameObject:
   m_ObjectHideFlags: 0

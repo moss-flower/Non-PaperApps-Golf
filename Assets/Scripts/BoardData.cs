@@ -10,4 +10,5 @@ public class BoardData
     public List<TileData> tiles;
     public Vector2Int winTileLocation;
     public Vector2Int startTileLocation;
+    public int par;
 }
