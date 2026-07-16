@@ -99,7 +99,7 @@ public class LevelManager : MonoBehaviour
             return;
         }
         currentLevel = levels[currentLevelIndex];
-        gameManager.Load(currentLevel.name);
+        gameManager.Load(currentLevel.path);
     }
 
     public BoardInfo GetCurrentLevel()
