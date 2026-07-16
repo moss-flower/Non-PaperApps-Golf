@@ -1404,6 +1404,8 @@ MonoBehaviour:
   mainMenuUI: {fileID: 472296202}
   menuManager: {fileID: 720024013}
   levelManager: {fileID: 1169821516}
+  gameManager: {fileID: 1413315691}
+  roundEndText: {fileID: 191532745}
 --- !u!1 &436711687
 GameObject:
   m_ObjectHideFlags: 0
