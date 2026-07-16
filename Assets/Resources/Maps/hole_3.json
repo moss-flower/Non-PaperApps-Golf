@@ -1886,5 +1886,6 @@
     "startTileLocation": {
         "x": 10,
         "y": 3
-    }
+    },
+    "par": 6
 }
