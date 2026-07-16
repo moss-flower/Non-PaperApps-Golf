@@ -4,8 +4,9 @@ using UnityEngine;
 
 public struct BoardInfo
 {
-    public String name;
-    public String path;
+    public string name;
+    public string path;
+    public int par;
 }
 
 public class LevelManager : MonoBehaviour
@@ -81,6 +82,7 @@ public class LevelManager : MonoBehaviour
     public void SelectLevel(int level)
     {
         currentLevelIndex = level;
+        currentLevel = levels[level];
         var levelPath = levels[currentLevelIndex].path;
         if (levelPath != "")
         {
@@ -97,7 +99,12 @@ public class LevelManager : MonoBehaviour
             return;
         }
         currentLevel = levels[currentLevelIndex];
-        gameManager.Load(currentLevel.name);
+        gameManager.Load(currentLevel.path);
+    }
+
+    public BoardInfo GetCurrentLevel()
+    {
+        return currentLevel;
     }
     
 }

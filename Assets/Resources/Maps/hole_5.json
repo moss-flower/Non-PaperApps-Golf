@@ -1,77 +1,77 @@
 {
-    "name": "hole_3",
+    "name": "Hole 5",
     "width": 15,
     "height": 25,
     "tiles": [
         {
             "x": 0,
             "y": 0,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 0,
             "y": 1,
-            "type": "Tree"
+            "type": "Water"
         },
         {
             "x": 0,
             "y": 2,
-            "type": "Tree"
+            "type": "Water"
         },
         {
             "x": 0,
             "y": 3,
-            "type": "Tree"
+            "type": "Water"
         },
         {
             "x": 0,
             "y": 4,
-            "type": "Tree"
+            "type": "Water"
         },
         {
             "x": 0,
             "y": 5,
-            "type": "Tree"
+            "type": "Water"
         },
         {
             "x": 0,
             "y": 6,
-            "type": "Tree"
+            "type": "Water"
         },
         {
             "x": 0,
             "y": 7,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 0,
             "y": 8,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 0,
             "y": 9,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 0,
             "y": 10,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 0,
             "y": 11,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 0,
             "y": 12,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 0,
             "y": 13,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 0,
@@ -86,112 +86,112 @@
         {
             "x": 0,
             "y": 16,
-            "type": "Tree"
+            "type": "Rough"
         },
         {
             "x": 0,
             "y": 17,
-            "type": "Tree"
+            "type": "Rough"
         },
         {
             "x": 0,
             "y": 18,
-            "type": "Tree"
+            "type": "Rough"
         },
         {
             "x": 0,
             "y": 19,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 0,
             "y": 20,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 0,
             "y": 21,
-            "type": "Tree"
+            "type": "Water"
         },
         {
             "x": 0,
             "y": 22,
-            "type": "Tree"
+            "type": "Water"
         },
         {
             "x": 0,
             "y": 23,
-            "type": "Tree"
+            "type": "Water"
         },
         {
             "x": 0,
             "y": 24,
-            "type": "Tree"
+            "type": "Water"
         },
         {
             "x": 1,
             "y": 0,
-            "type": "Tree"
+            "type": "Water"
         },
         {
             "x": 1,
             "y": 1,
-            "type": "Tree"
+            "type": "Water"
         },
         {
             "x": 1,
             "y": 2,
-            "type": "Tree"
+            "type": "Water"
         },
         {
             "x": 1,
             "y": 3,
-            "type": "Tree"
+            "type": "Water"
         },
         {
             "x": 1,
             "y": 4,
-            "type": "Tree"
+            "type": "Water"
         },
         {
             "x": 1,
             "y": 5,
-            "type": "Tree"
+            "type": "Water"
         },
         {
             "x": 1,
             "y": 6,
-            "type": "Tree"
+            "type": "Water"
         },
         {
             "x": 1,
             "y": 7,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 1,
             "y": 8,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 1,
             "y": 9,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 1,
             "y": 10,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 1,
             "y": 11,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 1,
             "y": 12,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 1,
@@ -241,102 +241,102 @@
         {
             "x": 1,
             "y": 22,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 1,
             "y": 23,
-            "type": "Tree"
+            "type": "Water"
         },
         {
             "x": 1,
             "y": 24,
-            "type": "Tree"
+            "type": "Water"
         },
         {
             "x": 2,
             "y": 0,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 2,
             "y": 1,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 2,
             "y": 2,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 2,
             "y": 3,
-            "type": "Tree"
+            "type": "Water"
         },
         {
             "x": 2,
             "y": 4,
-            "type": "Tree"
+            "type": "Water"
         },
         {
             "x": 2,
             "y": 5,
-            "type": "Tree"
+            "type": "Rough"
         },
         {
             "x": 2,
             "y": 6,
-            "type": "Tree"
+            "type": "Water"
         },
         {
             "x": 2,
             "y": 7,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 2,
             "y": 8,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 2,
             "y": 9,
-            "type": "Fairway"
+            "type": "Water"
         },
         {
             "x": 2,
             "y": 10,
-            "type": "Fairway"
+            "type": "Water"
         },
         {
             "x": 2,
             "y": 11,
-            "type": "Fairway"
+            "type": "Water"
         },
         {
             "x": 2,
             "y": 12,
-            "type": "Fairway"
+            "type": "Rough"
         },
         {
             "x": 2,
             "y": 13,
-            "type": "Fairway"
+            "type": "Rough"
         },
         {
             "x": 2,
             "y": 14,
-            "type": "Fairway"
+            "type": "Rough"
         },
         {
             "x": 2,
             "y": 15,
-            "type": "Fairway"
+            "type": "Rough"
         },
         {
             "x": 2,
             "y": 16,
-            "type": "Fairway"
+            "type": "Rough"
         },
         {
             "x": 2,
@@ -371,47 +371,47 @@
         {
             "x": 2,
             "y": 23,
-            "type": "Tree"
+            "type": "Water"
         },
         {
             "x": 2,
             "y": 24,
-            "type": "Tree"
+            "type": "Water"
         },
         {
             "x": 3,
             "y": 0,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 3,
             "y": 1,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 3,
             "y": 2,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 3,
             "y": 3,
-            "type": "Tree"
+            "type": "Water"
         },
         {
             "x": 3,
             "y": 4,
-            "type": "Tree"
+            "type": "Rough"
         },
         {
             "x": 3,
             "y": 5,
-            "type": "Tree"
+            "type": "Rough"
         },
         {
             "x": 3,
             "y": 6,
-            "type": "Tree"
+            "type": "Rough"
         },
         {
             "x": 3,
@@ -421,32 +421,32 @@
         {
             "x": 3,
             "y": 8,
-            "type": "Fairway"
+            "type": "Water"
         },
         {
             "x": 3,
             "y": 9,
-            "type": "Fairway"
+            "type": "Water"
         },
         {
             "x": 3,
             "y": 10,
-            "type": "Fairway"
+            "type": "Water"
         },
         {
             "x": 3,
             "y": 11,
-            "type": "Fairway"
+            "type": "Rough"
         },
         {
             "x": 3,
             "y": 12,
-            "type": "Fairway"
+            "type": "Rough"
         },
         {
             "x": 3,
             "y": 13,
-            "type": "Fairway"
+            "type": "Rough"
         },
         {
             "x": 3,
@@ -486,37 +486,37 @@
         {
             "x": 3,
             "y": 21,
-            "type": "Sand"
-        },
-        {
-            "x": 3,
-            "y": 22,
-            "type": "Sand"
-        },
-        {
-            "x": 3,
-            "y": 23,
             "type": "Rough"
         },
         {
             "x": 3,
-            "y": 24,
+            "y": 22,
             "type": "Rough"
+        },
+        {
+            "x": 3,
+            "y": 23,
+            "type": "Rough"
+        },
+        {
+            "x": 3,
+            "y": 24,
+            "type": "Water"
         },
         {
             "x": 4,
             "y": 0,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 4,
             "y": 1,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 4,
             "y": 2,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 4,
@@ -531,12 +531,12 @@
         {
             "x": 4,
             "y": 5,
-            "type": "Tree"
+            "type": "Rough"
         },
         {
             "x": 4,
             "y": 6,
-            "type": "Tree"
+            "type": "Rough"
         },
         {
             "x": 4,
@@ -546,27 +546,27 @@
         {
             "x": 4,
             "y": 8,
-            "type": "Fairway"
+            "type": "Water"
         },
         {
             "x": 4,
             "y": 9,
-            "type": "Fairway"
+            "type": "Water"
         },
         {
             "x": 4,
             "y": 10,
-            "type": "Fairway"
+            "type": "Water"
         },
         {
             "x": 4,
             "y": 11,
-            "type": "Fairway"
+            "type": "Water"
         },
         {
             "x": 4,
             "y": 12,
-            "type": "Fairway"
+            "type": "Rough"
         },
         {
             "x": 4,
@@ -596,27 +596,27 @@
         {
             "x": 4,
             "y": 18,
-            "type": "Rough"
+            "type": "Fairway"
         },
         {
             "x": 4,
             "y": 19,
-            "type": "Rough"
+            "type": "Fairway"
         },
         {
             "x": 4,
             "y": 20,
-            "type": "Sand"
+            "type": "Rough"
         },
         {
             "x": 4,
             "y": 21,
-            "type": "Sand"
+            "type": "Rough"
         },
         {
             "x": 4,
             "y": 22,
-            "type": "Sand"
+            "type": "Rough"
         },
         {
             "x": 4,
@@ -626,22 +626,22 @@
         {
             "x": 4,
             "y": 24,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 5,
             "y": 0,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 5,
             "y": 1,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 5,
             "y": 2,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 5,
@@ -656,42 +656,42 @@
         {
             "x": 5,
             "y": 5,
-            "type": "Tree"
+            "type": "Tee"
         },
         {
             "x": 5,
             "y": 6,
-            "type": "Tree"
+            "type": "Rough"
         },
         {
             "x": 5,
             "y": 7,
-            "type": "Tree"
+            "type": "Rough"
         },
         {
             "x": 5,
             "y": 8,
-            "type": "Fairway"
+            "type": "Water"
         },
         {
             "x": 5,
             "y": 9,
-            "type": "Fairway"
+            "type": "Water"
         },
         {
             "x": 5,
             "y": 10,
-            "type": "Fairway"
+            "type": "Water"
         },
         {
             "x": 5,
             "y": 11,
-            "type": "Fairway"
+            "type": "Water"
         },
         {
             "x": 5,
             "y": 12,
-            "type": "Fairway"
+            "type": "Rough"
         },
         {
             "x": 5,
@@ -701,47 +701,47 @@
         {
             "x": 5,
             "y": 14,
-            "type": "Tree"
+            "type": "Fairway"
         },
         {
             "x": 5,
             "y": 15,
-            "type": "Rough"
+            "type": "Fairway"
         },
         {
             "x": 5,
             "y": 16,
-            "type": "Rough"
+            "type": "Fairway"
         },
         {
             "x": 5,
             "y": 17,
-            "type": "Rough"
+            "type": "Fairway"
         },
         {
             "x": 5,
             "y": 18,
-            "type": "Rough"
+            "type": "Fairway"
         },
         {
             "x": 5,
             "y": 19,
-            "type": "Rough"
+            "type": "Fairway"
         },
         {
             "x": 5,
             "y": 20,
-            "type": "Sand"
+            "type": "Fairway"
         },
         {
             "x": 5,
             "y": 21,
-            "type": "Sand"
+            "type": "Rough"
         },
         {
             "x": 5,
             "y": 22,
-            "type": "Sand"
+            "type": "Rough"
         },
         {
             "x": 5,
@@ -756,17 +756,17 @@
         {
             "x": 6,
             "y": 0,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 6,
             "y": 1,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 6,
             "y": 2,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 6,
@@ -786,57 +786,57 @@
         {
             "x": 6,
             "y": 6,
-            "type": "Tree"
+            "type": "Rough"
         },
         {
             "x": 6,
             "y": 7,
-            "type": "Tree"
+            "type": "Rough"
         },
         {
             "x": 6,
             "y": 8,
-            "type": "Fairway"
+            "type": "Rough"
         },
         {
             "x": 6,
             "y": 9,
-            "type": "Fairway"
+            "type": "Water"
         },
         {
             "x": 6,
             "y": 10,
-            "type": "Fairway"
+            "type": "Water"
         },
         {
             "x": 6,
             "y": 11,
-            "type": "Fairway"
+            "type": "Water"
         },
         {
             "x": 6,
             "y": 12,
-            "type": "Tree"
+            "type": "Rough"
         },
         {
             "x": 6,
             "y": 13,
-            "type": "Tree"
+            "type": "Fairway"
         },
         {
             "x": 6,
             "y": 14,
-            "type": "Tree"
+            "type": "Fairway"
         },
         {
             "x": 6,
             "y": 15,
-            "type": "Tree"
+            "type": "Fairway"
         },
         {
             "x": 6,
             "y": 16,
-            "type": "Rough"
+            "type": "Fairway"
         },
         {
             "x": 6,
@@ -846,7 +846,7 @@
         {
             "x": 6,
             "y": 18,
-            "type": "Rough"
+            "type": "Fairway"
         },
         {
             "x": 6,
@@ -856,17 +856,17 @@
         {
             "x": 6,
             "y": 20,
-            "type": "Fairway"
+            "type": "Rough"
         },
         {
             "x": 6,
             "y": 21,
-            "type": "Fairway"
+            "type": "Rough"
         },
         {
             "x": 6,
             "y": 22,
-            "type": "Fairway"
+            "type": "Rough"
         },
         {
             "x": 6,
@@ -881,17 +881,17 @@
         {
             "x": 7,
             "y": 0,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 7,
             "y": 1,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 7,
             "y": 2,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 7,
@@ -911,52 +911,52 @@
         {
             "x": 7,
             "y": 6,
-            "type": "Tree"
+            "type": "Rough"
         },
         {
             "x": 7,
             "y": 7,
-            "type": "Tree"
+            "type": "Rough"
         },
         {
             "x": 7,
             "y": 8,
-            "type": "Fairway"
+            "type": "Rough"
         },
         {
             "x": 7,
             "y": 9,
-            "type": "Fairway"
+            "type": "Water"
         },
         {
             "x": 7,
             "y": 10,
-            "type": "Fairway"
+            "type": "Water"
         },
         {
             "x": 7,
             "y": 11,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 7,
             "y": 12,
-            "type": "Tree"
+            "type": "Rough"
         },
         {
             "x": 7,
             "y": 13,
-            "type": "Tree"
+            "type": "Fairway"
         },
         {
             "x": 7,
             "y": 14,
-            "type": "Tree"
+            "type": "Fairway"
         },
         {
             "x": 7,
             "y": 15,
-            "type": "Rough"
+            "type": "Fairway"
         },
         {
             "x": 7,
@@ -971,32 +971,32 @@
         {
             "x": 7,
             "y": 18,
-            "type": "Fairway"
+            "type": "Rough"
         },
         {
             "x": 7,
             "y": 19,
-            "type": "Fairway"
+            "type": "Rough"
         },
         {
             "x": 7,
             "y": 20,
-            "type": "Fairway"
+            "type": "Rough"
         },
         {
             "x": 7,
             "y": 21,
-            "type": "Fairway"
+            "type": "Rough"
         },
         {
             "x": 7,
             "y": 22,
-            "type": "Fairway"
+            "type": "Rough"
         },
         {
             "x": 7,
             "y": 23,
-            "type": "Fairway"
+            "type": "Rough"
         },
         {
             "x": 7,
@@ -1006,27 +1006,27 @@
         {
             "x": 8,
             "y": 0,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 8,
             "y": 1,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 8,
             "y": 2,
-            "type": "Fairway"
+            "type": "Water"
         },
         {
             "x": 8,
             "y": 3,
-            "type": "Fairway"
+            "type": "Rough"
         },
         {
             "x": 8,
             "y": 4,
-            "type": "Fairway"
+            "type": "Rough"
         },
         {
             "x": 8,
@@ -1036,32 +1036,32 @@
         {
             "x": 8,
             "y": 6,
-            "type": "Tree"
+            "type": "Rough"
         },
         {
             "x": 8,
             "y": 7,
-            "type": "Tree"
+            "type": "Rough"
         },
         {
             "x": 8,
             "y": 8,
-            "type": "Fairway"
+            "type": "Rough"
         },
         {
             "x": 8,
             "y": 9,
-            "type": "Fairway"
+            "type": "Water"
         },
         {
             "x": 8,
             "y": 10,
-            "type": "Fairway"
+            "type": "Water"
         },
         {
             "x": 8,
             "y": 11,
-            "type": "Fairway"
+            "type": "Rough"
         },
         {
             "x": 8,
@@ -1071,12 +1071,12 @@
         {
             "x": 8,
             "y": 13,
-            "type": "Tree"
+            "type": "Rough"
         },
         {
             "x": 8,
             "y": 14,
-            "type": "Tree"
+            "type": "Rough"
         },
         {
             "x": 8,
@@ -1086,524 +1086,524 @@
         {
             "x": 8,
             "y": 16,
-            "type": "Sand"
+            "type": "Rough"
         },
         {
             "x": 8,
             "y": 17,
-            "type": "Sand"
+            "type": "Rough"
         },
         {
             "x": 8,
             "y": 18,
-            "type": "Fairway"
+            "type": "Rough"
         },
         {
             "x": 8,
             "y": 19,
-            "type": "Fairway"
+            "type": "Sand"
         },
         {
             "x": 8,
             "y": 20,
+            "type": "Sand"
+        },
+        {
+            "x": 8,
+            "y": 21,
             "type": "Fairway"
         },
         {
             "x": 8,
+            "y": 22,
+            "type": "Fairway"
+        },
+        {
+            "x": 8,
+            "y": 23,
+            "type": "Rough"
+        },
+        {
+            "x": 8,
+            "y": 24,
+            "type": "Rough"
+        },
+        {
+            "x": 9,
+            "y": 0,
+            "type": "Water"
+        },
+        {
+            "x": 9,
+            "y": 1,
+            "type": "Water"
+        },
+        {
+            "x": 9,
+            "y": 2,
+            "type": "Water"
+        },
+        {
+            "x": 9,
+            "y": 3,
+            "type": "Rough"
+        },
+        {
+            "x": 9,
+            "y": 4,
+            "type": "Rough"
+        },
+        {
+            "x": 9,
+            "y": 5,
+            "type": "Rough"
+        },
+        {
+            "x": 9,
+            "y": 6,
+            "type": "Rough"
+        },
+        {
+            "x": 9,
+            "y": 7,
+            "type": "Rough"
+        },
+        {
+            "x": 9,
+            "y": 8,
+            "type": "Rough"
+        },
+        {
+            "x": 9,
+            "y": 9,
+            "type": "Water"
+        },
+        {
+            "x": 9,
+            "y": 10,
+            "type": "Water"
+        },
+        {
+            "x": 9,
+            "y": 11,
+            "type": "Rough"
+        },
+        {
+            "x": 9,
+            "y": 12,
+            "type": "Rough"
+        },
+        {
+            "x": 9,
+            "y": 13,
+            "type": "Rough"
+        },
+        {
+            "x": 9,
+            "y": 14,
+            "type": "Rough"
+        },
+        {
+            "x": 9,
+            "y": 15,
+            "type": "Rough"
+        },
+        {
+            "x": 9,
+            "y": 16,
+            "type": "Rough"
+        },
+        {
+            "x": 9,
+            "y": 17,
+            "type": "Rough"
+        },
+        {
+            "x": 9,
+            "y": 18,
+            "type": "Sand"
+        },
+        {
+            "x": 9,
+            "y": 19,
+            "type": "Sand"
+        },
+        {
+            "x": 9,
+            "y": 20,
+            "type": "Sand"
+        },
+        {
+            "x": 9,
+            "y": 21,
+            "type": "Fairway"
+        },
+        {
+            "x": 9,
+            "y": 22,
+            "type": "Fairway"
+        },
+        {
+            "x": 9,
+            "y": 23,
+            "type": "Fairway"
+        },
+        {
+            "x": 9,
+            "y": 24,
+            "type": "Rough"
+        },
+        {
+            "x": 10,
+            "y": 0,
+            "type": "Water"
+        },
+        {
+            "x": 10,
+            "y": 1,
+            "type": "Water"
+        },
+        {
+            "x": 10,
+            "y": 2,
+            "type": "Water"
+        },
+        {
+            "x": 10,
+            "y": 3,
+            "type": "Water"
+        },
+        {
+            "x": 10,
+            "y": 4,
+            "type": "Water"
+        },
+        {
+            "x": 10,
+            "y": 5,
+            "type": "Water"
+        },
+        {
+            "x": 10,
+            "y": 6,
+            "type": "Rough"
+        },
+        {
+            "x": 10,
+            "y": 7,
+            "type": "Rough"
+        },
+        {
+            "x": 10,
+            "y": 8,
+            "type": "Rough"
+        },
+        {
+            "x": 10,
+            "y": 9,
+            "type": "Rough"
+        },
+        {
+            "x": 10,
+            "y": 10,
+            "type": "Rough"
+        },
+        {
+            "x": 10,
+            "y": 11,
+            "type": "Rough"
+        },
+        {
+            "x": 10,
+            "y": 12,
+            "type": "Rough"
+        },
+        {
+            "x": 10,
+            "y": 13,
+            "type": "Rough"
+        },
+        {
+            "x": 10,
+            "y": 14,
+            "type": "Rough"
+        },
+        {
+            "x": 10,
+            "y": 15,
+            "type": "Rough"
+        },
+        {
+            "x": 10,
+            "y": 16,
+            "type": "Rough"
+        },
+        {
+            "x": 10,
+            "y": 17,
+            "type": "Rough"
+        },
+        {
+            "x": 10,
+            "y": 18,
+            "type": "Sand"
+        },
+        {
+            "x": 10,
+            "y": 19,
+            "type": "Sand"
+        },
+        {
+            "x": 10,
+            "y": 20,
+            "type": "Fairway"
+        },
+        {
+            "x": 10,
+            "y": 21,
+            "type": "Fairway"
+        },
+        {
+            "x": 10,
+            "y": 22,
+            "type": "Fairway"
+        },
+        {
+            "x": 10,
+            "y": 23,
+            "type": "Fairway"
+        },
+        {
+            "x": 10,
+            "y": 24,
+            "type": "Fairway"
+        },
+        {
+            "x": 11,
+            "y": 0,
+            "type": "Water"
+        },
+        {
+            "x": 11,
+            "y": 1,
+            "type": "Water"
+        },
+        {
+            "x": 11,
+            "y": 2,
+            "type": "Water"
+        },
+        {
+            "x": 11,
+            "y": 3,
+            "type": "Water"
+        },
+        {
+            "x": 11,
+            "y": 4,
+            "type": "Water"
+        },
+        {
+            "x": 11,
+            "y": 5,
+            "type": "Water"
+        },
+        {
+            "x": 11,
+            "y": 6,
+            "type": "Water"
+        },
+        {
+            "x": 11,
+            "y": 7,
+            "type": "Rough"
+        },
+        {
+            "x": 11,
+            "y": 8,
+            "type": "Rough"
+        },
+        {
+            "x": 11,
+            "y": 9,
+            "type": "Rough"
+        },
+        {
+            "x": 11,
+            "y": 10,
+            "type": "Rough"
+        },
+        {
+            "x": 11,
+            "y": 11,
+            "type": "Rough"
+        },
+        {
+            "x": 11,
+            "y": 12,
+            "type": "Rough"
+        },
+        {
+            "x": 11,
+            "y": 13,
+            "type": "Rough"
+        },
+        {
+            "x": 11,
+            "y": 14,
+            "type": "Rough"
+        },
+        {
+            "x": 11,
+            "y": 15,
+            "type": "Rough"
+        },
+        {
+            "x": 11,
+            "y": 16,
+            "type": "Rough"
+        },
+        {
+            "x": 11,
+            "y": 17,
+            "type": "Rough"
+        },
+        {
+            "x": 11,
+            "y": 18,
+            "type": "Sand"
+        },
+        {
+            "x": 11,
+            "y": 19,
+            "type": "Sand"
+        },
+        {
+            "x": 11,
+            "y": 20,
+            "type": "Fairway"
+        },
+        {
+            "x": 11,
             "y": 21,
             "type": "Flag"
         },
         {
-            "x": 8,
+            "x": 11,
             "y": 22,
             "type": "Fairway"
         },
         {
-            "x": 8,
+            "x": 11,
             "y": 23,
             "type": "Fairway"
         },
         {
-            "x": 8,
+            "x": 11,
             "y": 24,
-            "type": "Rough"
+            "type": "Fairway"
         },
         {
-            "x": 9,
+            "x": 12,
             "y": 0,
-            "type": "Rough"
+            "type": "Water"
         },
         {
-            "x": 9,
+            "x": 12,
             "y": 1,
+            "type": "Water"
+        },
+        {
+            "x": 12,
+            "y": 2,
+            "type": "Water"
+        },
+        {
+            "x": 12,
+            "y": 3,
+            "type": "Water"
+        },
+        {
+            "x": 12,
+            "y": 4,
             "type": "Rough"
         },
         {
-            "x": 9,
-            "y": 2,
-            "type": "Fairway"
-        },
-        {
-            "x": 9,
-            "y": 3,
-            "type": "Fairway"
-        },
-        {
-            "x": 9,
-            "y": 4,
-            "type": "Fairway"
-        },
-        {
-            "x": 9,
+            "x": 12,
             "y": 5,
-            "type": "Fairway"
+            "type": "Rough"
         },
         {
-            "x": 9,
+            "x": 12,
             "y": 6,
             "type": "Water"
         },
         {
-            "x": 9,
+            "x": 12,
             "y": 7,
             "type": "Water"
         },
         {
-            "x": 9,
+            "x": 12,
             "y": 8,
-            "type": "Fairway"
+            "type": "Water"
         },
         {
-            "x": 9,
+            "x": 12,
             "y": 9,
-            "type": "Fairway"
+            "type": "Water"
         },
         {
-            "x": 9,
+            "x": 12,
             "y": 10,
-            "type": "Fairway"
+            "type": "Rough"
         },
         {
-            "x": 9,
+            "x": 12,
             "y": 11,
-            "type": "Fairway"
+            "type": "Rough"
         },
         {
-            "x": 9,
+            "x": 12,
             "y": 12,
-            "type": "Fairway"
+            "type": "Rough"
         },
         {
-            "x": 9,
+            "x": 12,
             "y": 13,
-            "type": "Tree"
+            "type": "Rough"
         },
         {
-            "x": 9,
+            "x": 12,
             "y": 14,
-            "type": "Tree"
+            "type": "Rough"
         },
         {
-            "x": 9,
+            "x": 12,
             "y": 15,
+            "type": "Rough"
+        },
+        {
+            "x": 12,
+            "y": 16,
+            "type": "Rough"
+        },
+        {
+            "x": 12,
+            "y": 17,
+            "type": "Rough"
+        },
+        {
+            "x": 12,
+            "y": 18,
             "type": "Sand"
         },
         {
-            "x": 9,
-            "y": 16,
+            "x": 12,
+            "y": 19,
             "type": "Sand"
         },
         {
-            "x": 9,
-            "y": 17,
-            "type": "Sand"
-        },
-        {
-            "x": 9,
-            "y": 18,
-            "type": "Fairway"
-        },
-        {
-            "x": 9,
-            "y": 19,
-            "type": "Fairway"
-        },
-        {
-            "x": 9,
-            "y": 20,
-            "type": "Fairway"
-        },
-        {
-            "x": 9,
-            "y": 21,
-            "type": "Fairway"
-        },
-        {
-            "x": 9,
-            "y": 22,
-            "type": "Fairway"
-        },
-        {
-            "x": 9,
-            "y": 23,
-            "type": "Fairway"
-        },
-        {
-            "x": 9,
-            "y": 24,
-            "type": "Rough"
-        },
-        {
-            "x": 10,
-            "y": 0,
-            "type": "Rough"
-        },
-        {
-            "x": 10,
-            "y": 1,
-            "type": "Rough"
-        },
-        {
-            "x": 10,
-            "y": 2,
-            "type": "Fairway"
-        },
-        {
-            "x": 10,
-            "y": 3,
-            "type": "Tee"
-        },
-        {
-            "x": 10,
-            "y": 4,
-            "type": "Fairway"
-        },
-        {
-            "x": 10,
-            "y": 5,
-            "type": "Fairway"
-        },
-        {
-            "x": 10,
-            "y": 6,
-            "type": "Water"
-        },
-        {
-            "x": 10,
-            "y": 7,
-            "type": "Water"
-        },
-        {
-            "x": 10,
-            "y": 8,
-            "type": "Fairway"
-        },
-        {
-            "x": 10,
-            "y": 9,
-            "type": "Fairway"
-        },
-        {
-            "x": 10,
-            "y": 10,
-            "type": "Fairway"
-        },
-        {
-            "x": 10,
-            "y": 11,
-            "type": "Fairway"
-        },
-        {
-            "x": 10,
-            "y": 12,
-            "type": "Fairway"
-        },
-        {
-            "x": 10,
-            "y": 13,
-            "type": "Tree"
-        },
-        {
-            "x": 10,
-            "y": 14,
-            "type": "Tree"
-        },
-        {
-            "x": 10,
-            "y": 15,
-            "type": "Sand"
-        },
-        {
-            "x": 10,
-            "y": 16,
-            "type": "Sand"
-        },
-        {
-            "x": 10,
-            "y": 17,
-            "type": "Fairway"
-        },
-        {
-            "x": 10,
-            "y": 18,
-            "type": "Fairway"
-        },
-        {
-            "x": 10,
-            "y": 19,
-            "type": "Fairway"
-        },
-        {
-            "x": 10,
-            "y": 20,
-            "type": "Fairway"
-        },
-        {
-            "x": 10,
-            "y": 21,
-            "type": "Fairway"
-        },
-        {
-            "x": 10,
-            "y": 22,
-            "type": "Fairway"
-        },
-        {
-            "x": 10,
-            "y": 23,
-            "type": "Rough"
-        },
-        {
-            "x": 10,
-            "y": 24,
-            "type": "Rough"
-        },
-        {
-            "x": 11,
-            "y": 0,
-            "type": "Rough"
-        },
-        {
-            "x": 11,
-            "y": 1,
-            "type": "Rough"
-        },
-        {
-            "x": 11,
-            "y": 2,
-            "type": "Fairway"
-        },
-        {
-            "x": 11,
-            "y": 3,
-            "type": "Fairway"
-        },
-        {
-            "x": 11,
-            "y": 4,
-            "type": "Fairway"
-        },
-        {
-            "x": 11,
-            "y": 5,
-            "type": "Fairway"
-        },
-        {
-            "x": 11,
-            "y": 6,
-            "type": "Water"
-        },
-        {
-            "x": 11,
-            "y": 7,
-            "type": "Water"
-        },
-        {
-            "x": 11,
-            "y": 8,
-            "type": "Fairway"
-        },
-        {
-            "x": 11,
-            "y": 9,
-            "type": "Fairway"
-        },
-        {
-            "x": 11,
-            "y": 10,
-            "type": "Fairway"
-        },
-        {
-            "x": 11,
-            "y": 11,
-            "type": "Fairway"
-        },
-        {
-            "x": 11,
-            "y": 12,
-            "type": "Fairway"
-        },
-        {
-            "x": 11,
-            "y": 13,
-            "type": "Tree"
-        },
-        {
-            "x": 11,
-            "y": 14,
-            "type": "Tree"
-        },
-        {
-            "x": 11,
-            "y": 15,
-            "type": "Water"
-        },
-        {
-            "x": 11,
-            "y": 16,
-            "type": "Water"
-        },
-        {
-            "x": 11,
-            "y": 17,
-            "type": "Fairway"
-        },
-        {
-            "x": 11,
-            "y": 18,
-            "type": "Fairway"
-        },
-        {
-            "x": 11,
-            "y": 19,
-            "type": "Fairway"
-        },
-        {
-            "x": 11,
-            "y": 20,
-            "type": "Fairway"
-        },
-        {
-            "x": 11,
-            "y": 21,
-            "type": "Fairway"
-        },
-        {
-            "x": 11,
-            "y": 22,
-            "type": "Fairway"
-        },
-        {
-            "x": 11,
-            "y": 23,
-            "type": "Rough"
-        },
-        {
-            "x": 11,
-            "y": 24,
-            "type": "Rough"
-        },
-        {
-            "x": 12,
-            "y": 0,
-            "type": "Rough"
-        },
-        {
-            "x": 12,
-            "y": 1,
-            "type": "Rough"
-        },
-        {
-            "x": 12,
-            "y": 2,
-            "type": "Rough"
-        },
-        {
-            "x": 12,
-            "y": 3,
-            "type": "Rough"
-        },
-        {
-            "x": 12,
-            "y": 4,
-            "type": "Rough"
-        },
-        {
-            "x": 12,
-            "y": 5,
-            "type": "Water"
-        },
-        {
-            "x": 12,
-            "y": 6,
-            "type": "Water"
-        },
-        {
-            "x": 12,
-            "y": 7,
-            "type": "Water"
-        },
-        {
-            "x": 12,
-            "y": 8,
-            "type": "Fairway"
-        },
-        {
-            "x": 12,
-            "y": 9,
-            "type": "Fairway"
-        },
-        {
-            "x": 12,
-            "y": 10,
-            "type": "Fairway"
-        },
-        {
-            "x": 12,
-            "y": 11,
-            "type": "Fairway"
-        },
-        {
-            "x": 12,
-            "y": 12,
-            "type": "Fairway"
-        },
-        {
-            "x": 12,
-            "y": 13,
-            "type": "Tree"
-        },
-        {
-            "x": 12,
-            "y": 14,
-            "type": "Tree"
-        },
-        {
-            "x": 12,
-            "y": 15,
-            "type": "Water"
-        },
-        {
-            "x": 12,
-            "y": 16,
-            "type": "Water"
-        },
-        {
-            "x": 12,
-            "y": 17,
-            "type": "Water"
-        },
-        {
-            "x": 12,
-            "y": 18,
-            "type": "Fairway"
-        },
-        {
-            "x": 12,
-            "y": 19,
-            "type": "Fairway"
-        },
-        {
             "x": 12,
             "y": 20,
             "type": "Fairway"
@@ -1611,17 +1611,17 @@
         {
             "x": 12,
             "y": 21,
-            "type": "Rough"
+            "type": "Fairway"
         },
         {
             "x": 12,
             "y": 22,
-            "type": "Rough"
+            "type": "Fairway"
         },
         {
             "x": 12,
             "y": 23,
-            "type": "Rough"
+            "type": "Fairway"
         },
         {
             "x": 12,
@@ -1631,22 +1631,22 @@
         {
             "x": 13,
             "y": 0,
-            "type": "Tree"
+            "type": "Water"
         },
         {
             "x": 13,
             "y": 1,
-            "type": "Tree"
+            "type": "Water"
         },
         {
             "x": 13,
             "y": 2,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 13,
             "y": 3,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 13,
@@ -1661,47 +1661,47 @@
         {
             "x": 13,
             "y": 6,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 13,
             "y": 7,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 13,
             "y": 8,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 13,
             "y": 9,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 13,
             "y": 10,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 13,
             "y": 11,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 13,
             "y": 12,
-            "type": "Tree"
+            "type": "Rough"
         },
         {
             "x": 13,
             "y": 13,
-            "type": "Tree"
+            "type": "Rough"
         },
         {
             "x": 13,
             "y": 14,
-            "type": "Tree"
+            "type": "Rough"
         },
         {
             "x": 13,
@@ -1711,12 +1711,12 @@
         {
             "x": 13,
             "y": 16,
-            "type": "Water"
+            "type": "Rough"
         },
         {
             "x": 13,
             "y": 17,
-            "type": "Water"
+            "type": "Rough"
         },
         {
             "x": 13,
@@ -1746,32 +1746,32 @@
         {
             "x": 13,
             "y": 23,
-            "type": "Tree"
+            "type": "Rough"
         },
         {
             "x": 13,
             "y": 24,
-            "type": "Tree"
+            "type": "Water"
         },
         {
             "x": 14,
             "y": 0,
-            "type": "Tree"
+            "type": "Water"
         },
         {
             "x": 14,
             "y": 1,
-            "type": "Tree"
+            "type": "Water"
         },
         {
             "x": 14,
             "y": 2,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 14,
             "y": 3,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 14,
@@ -1786,57 +1786,57 @@
         {
             "x": 14,
             "y": 6,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 14,
             "y": 7,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 14,
             "y": 8,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 14,
             "y": 9,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 14,
             "y": 10,
-            "type": "Rough"
+            "type": "Water"
         },
         {
             "x": 14,
             "y": 11,
-            "type": "Tree"
+            "type": "Water"
         },
         {
             "x": 14,
             "y": 12,
-            "type": "Tree"
+            "type": "Water"
         },
         {
             "x": 14,
             "y": 13,
-            "type": "Tree"
+            "type": "Rough"
         },
         {
             "x": 14,
             "y": 14,
-            "type": "Tree"
+            "type": "Rough"
         },
         {
             "x": 14,
             "y": 15,
-            "type": "Tree"
+            "type": "Rough"
         },
         {
             "x": 14,
             "y": 16,
-            "type": "Tree"
+            "type": "Rough"
         },
         {
             "x": 14,
@@ -1866,26 +1866,26 @@
         {
             "x": 14,
             "y": 22,
-            "type": "Tree"
+            "type": "Water"
         },
         {
             "x": 14,
             "y": 23,
-            "type": "Tree"
+            "type": "Water"
         },
         {
             "x": 14,
             "y": 24,
-            "type": "Tree"
+            "type": "Water"
         }
     ],
     "winTileLocation": {
-        "x": 8,
+        "x": 11,
         "y": 21
     },
     "startTileLocation": {
-        "x": 10,
-        "y": 3
+        "x": 5,
+        "y": 5
     },
-    "par": 6
+    "par": 5
 }

@@ -17,6 +17,7 @@ namespace Editor
 
         private string boardName;
         private int width, height;
+        private int parScore = 3;
         private GameObject paintableTilePrefab;
         private TileDefinition selectedTileDefinition;
         private float brushRadius;
@@ -39,6 +40,7 @@ namespace Editor
             boardName = EditorGUILayout.TextField("Board Name", boardName);
             width = EditorGUILayout.IntField("Width", width);
             height = EditorGUILayout.IntField("Height", height);
+            parScore = EditorGUILayout.IntField("Par Score", parScore);
             paintableTilePrefab = EditorGUILayout.ObjectField(paintableTilePrefab, typeof(GameObject), false) as GameObject;
             EditorGUILayout.Space();
 
@@ -163,7 +165,8 @@ namespace Editor
                 name = boardName,
                 width = width,
                 height = height,
-                tiles = new List<TileData>()
+                tiles = new List<TileData>(),
+                par = parScore
             };
 
             for (int x = 0; x < width; x++)

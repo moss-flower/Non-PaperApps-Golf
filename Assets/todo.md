@@ -24,3 +24,23 @@ July 13th 2026
 - [ ] Replace main menu graphic with real tiles
 - [x] Fix color on main menu wave
 - [ ] Add a pause menu during game time.
+
+July 14th 2026
+MVP is almost finished. Following needs to be finished for MVP to be considered ready:
+- [ ] Round End screen should reflect real game statistics
+- [ ] Levels should contain Par information to compare against Real Play
+- [ ] Level Select screens should be capable of displaying all available levels
+- [ ] Score should be tracked in a database, with connection to each level.
+- [ ] 9 playable holes should be available.
+
+The following are goals for future development
+- [ ] Color blind modes
+- [ ] Full Graphic design pass
+- [ ] Dice Rolling animation
+- [ ] Tween and animation pass in general for all UI elements
+- [ ] Settings Menu
+- [ ] Basic Music
+- [ ] Sound Effects
+- [ ] 18 Holes, tried and tested
+- [ ] Possibly a level creator using an implementation of the tools I've already developed.
+

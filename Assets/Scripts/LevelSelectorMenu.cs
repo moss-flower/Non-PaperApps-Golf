@@ -1,19 +1,21 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class LevelSelectorMenu : Menu
 {
     
     [SerializeField] private GameObject levelButtonPrefab;
     [SerializeField] private GameObject viewport;
-    [SerializeField] private GameObject levelListHolderPrefab;
+    [SerializeField] private GameObject levelListParent;
+    [SerializeField] private ScrollRect scrollRect;
     
     [SerializeField] private LevelManager levelManager;
     
     private int selectedLevel = -1;
-    private GameObject levelListParent;
 
     private void OnEnable()
     {
@@ -34,7 +36,7 @@ public class LevelSelectorMenu : Menu
 
     private void OnDisable()
     {;
-        Destroy(levelListParent);
+        DestroyChildren();
         viewport.SetActive(false);
         selectedLevel = -1;
     }
@@ -53,15 +55,19 @@ public class LevelSelectorMenu : Menu
         levelManager.SelectLevel(selectedLevel);
     }
 
+    private void DestroyChildren()
+    {
+        if (levelListParent == null) return;
+        foreach (Transform child in levelListParent.transform)
+        {
+            Destroy(child.gameObject);
+        }
+    }
+
     private void GenerateLevelList(List<BoardInfo> boards)
     {
         
-        if (levelListParent != null)
-        {
-            Destroy(levelListParent);
-        }
-        levelListParent = Instantiate(levelListHolderPrefab, viewport.transform);
-
+        DestroyChildren();
         if (levelButtonPrefab == null)
         {
             throw new NullReferenceException("Missing: LevelButtonPrefab");
@@ -78,11 +84,25 @@ public class LevelSelectorMenu : Menu
             LevelSelectButton button = levelButton.GetComponent<LevelSelectButton>();
             button.InitializeButton(boards[i].name, i, this);
         }
+
+        scrollRect.content = levelListParent.GetComponent<RectTransform>();
+        if (scrollRect != null)
+        {
+            StartCoroutine(ResetScrollPosition());
+        }
+        
     }
 
     public void OnClick(int level)
     {
         SelectLevel(level);
+    }
+    
+    IEnumerator ResetScrollPosition()
+    {
+        // Wait one frame to ensure Content Size Fitter adjusts layout properly
+        yield return new WaitForEndOfFrame();
+        scrollRect.verticalNormalizedPosition = 1f;
     }
 }
 
