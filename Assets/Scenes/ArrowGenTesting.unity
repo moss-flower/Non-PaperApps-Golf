@@ -482,7 +482,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e484e79d5b7174d9b3a414bf8f30b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ArrowGenerator
-  stemLength: 3
+  tipLength: 1
+  tipWidth: 2
   stemWidth: 1
   pointA: {fileID: 742695495}
   pointB: {fileID: 387544133}

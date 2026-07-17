@@ -7,7 +7,8 @@ using UnityEngine;
 public class ArrowGenerator : MonoBehaviour
 {
 
-    public float stemLength;
+    public float tipLength;
+    public float tipWidth;
     public float stemWidth;
 
     [System.NonSerialized] public List<Vector3> verticesList;
@@ -34,11 +35,15 @@ public class ArrowGenerator : MonoBehaviour
         triangleList = new List<int>();
         
         Vector3 stemOrigin = pointA.position;
-        Vector3 stemTerminator = pointB.position;
+        Vector3 arrowTerminator = pointB.position;
         float stemHalfWidth = stemWidth / 2;
         
-        Vector3 direction = stemTerminator - stemOrigin;
+        float arrowLength = Vector3.Distance(stemOrigin, arrowTerminator);
+        float stemLength = arrowLength - tipLength;
+        Vector3 direction = arrowTerminator - stemOrigin;
         Vector3 normalizedDir = Vector3.Normalize(new Vector3(direction.x, direction.y, 0));
+        Vector3 stemTerminator = stemOrigin + (normalizedDir * stemLength); 
+        
         Vector3 perpendicular = new Vector3(-normalizedDir.y, normalizedDir.x, 0);
         
         Vector3 offset = perpendicular * stemHalfWidth; 
@@ -57,6 +62,21 @@ public class ArrowGenerator : MonoBehaviour
         triangleList.Add(0);
         triangleList.Add(3);
         triangleList.Add(2);
+        
+        //Tip Setup
+        float tipHalfWidth = tipWidth / 2;
+
+        Vector3 tipOffset = perpendicular * tipHalfWidth;
+        
+        // tip points
+        verticesList.Add(stemTerminator + tipOffset);
+        verticesList.Add(stemTerminator - tipOffset);
+        verticesList.Add(arrowTerminator);
+        
+        // tip triangle
+        triangleList.Add(4);
+        triangleList.Add(6);
+        triangleList.Add(5);
 
         mesh.vertices = verticesList.ToArray();
         mesh.triangles = triangleList.ToArray();
