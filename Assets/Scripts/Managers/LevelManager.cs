@@ -9,6 +9,10 @@ public struct BoardInfo
     public int par;
 }
 
+/// <summary>
+/// Handles level selection state and tracks list of levels across level transitions.
+/// Provides game manager with information for each level.
+/// </summary>
 public class LevelManager : MonoBehaviour
 {
     [SerializeField] GameManager gameManager;
