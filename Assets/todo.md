@@ -32,7 +32,7 @@ MVP is almost finished. Following needs to be finished for MVP to be considered 
 - [ ] Level Select screens should be capable of displaying all available levels
 - [ ] Score should be tracked in a database, with connection to each level.
 - [ ] 9 playable holes should be available.
-
+- [ ] Add an animation for the ball travelling, and draw a line between the two positions, so you can see a map of the players shots!
 The following are goals for future development
 - [ ] Color blind modes
 - [ ] Full Graphic design pass
