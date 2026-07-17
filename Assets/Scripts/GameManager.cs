@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     // Board Related Stuff
     [SerializeField] private BoardFactory boardFactory;
     [SerializeField] private Vector2Int boardSize = new Vector2Int(26, 16);
-    public Board board { get; private set; }
+    private Board board { get; set; }
     [SerializeField] private string boardName;
     private GameObject boardRoot;
     
@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     // Events
     public static event Action OnGameStart;
     public event Action<int> OnScoreChanged;
-    public event Action<int> OnRoll;
+    public event Action<int, int> OnRoll;
     public event Action OnRoundEnd;
     public event Action OnPause;
 
@@ -120,11 +120,25 @@ public class GameManager : MonoBehaviour
 
     public void HandleRoll()
     {
+        if (gameState.HasRolled() && gameState.RemainingMulligans <= 0)
+        {
+            return;
+        } 
+        if (gameState.HasRolled() && gameState.RemainingMulligans >= 1)
+        {
+            gameState.decrementMulligans();
+        }
+        if (!gameState.HasRolled())
+        {
+            gameState.setHasRolled(true);
+        }
+        
         int roll = diceRoller.Roll() + golfBall.modifier;
-        OnRoll?.Invoke(roll - golfBall.modifier);
+        OnRoll?.Invoke(roll - golfBall.modifier, gameState.RemainingMulligans);
         print("Roll: " + roll);
         resetTiles();
         checkAvailableTiles(roll);
+        
     }
 
     private void checkAvailableTiles(int roll)
