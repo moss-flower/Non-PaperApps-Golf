@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using Builders;
 using UnityEngine;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -21,6 +23,9 @@ public class GameManager : MonoBehaviour
     // Rolling related stuff
     private DiceRoller diceRoller;
     private List<Tile> activeTiles = new List<Tile>();
+    
+    //Other stuff
+    [SerializeField] private ArrowBuilder arrowBuilder;
 
     private bool pauseState = false;
     
@@ -76,6 +81,7 @@ public class GameManager : MonoBehaviour
         MoveEvent(board.startTileLocation.x, board.startTileLocation.y);
         
         gameState.startGame();
+        arrowBuilder.Initialize();
         
         
         // Event Subscriptions
@@ -87,6 +93,8 @@ public class GameManager : MonoBehaviour
 
     public void MoveEvent(int x, int y)
     {
+        Vector3 currentPosition = golfBall.transform.position;
+        
         if (activeTiles.Count > 0)
         {
             resetTiles();
@@ -96,6 +104,12 @@ public class GameManager : MonoBehaviour
         Vector3 newPosition = selectedTile.transform.position;
         golfBall.move(newPosition, new Vector2Int(x,y));
         applyTileEffect(selectedTile);
+
+        if (arrowBuilder.IsInitialized())
+        {
+            arrowBuilder.AddArrow(currentPosition, newPosition);
+        }
+        
         
         gameState.incrementScore();
         if (OnScoreChanged != null)
@@ -106,6 +120,7 @@ public class GameManager : MonoBehaviour
         if (selectedTile.tileDefinition.isWinningTile)
         {
             gameState.endGame();
+            arrowBuilder.RemoveArrows();
             OnRoundEnd?.Invoke();
         }
         

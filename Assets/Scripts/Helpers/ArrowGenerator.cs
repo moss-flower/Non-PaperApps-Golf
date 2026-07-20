@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Unity.Mathematics;
 using UnityEngine;
 
 
@@ -14,28 +13,21 @@ public class ArrowGenerator : MonoBehaviour
     [System.NonSerialized] public List<Vector3> verticesList;
     [System.NonSerialized] public List<int> triangleList;
     
-    [SerializeField] Transform pointA;
-    [SerializeField] Transform pointB;
     private Mesh mesh;
-    
-    void Start()
+
+    public void OnCreate()
     {
         mesh = new Mesh();
         this.GetComponent<MeshFilter>().mesh = mesh;
     }
 
-    private void Update()
-    {
-        GenerateArrow();
-    }
-
-    void GenerateArrow()
+    public void GenerateArrow(Vector3 pointA, Vector3 pointB)
     {
         verticesList = new List<Vector3>();
         triangleList = new List<int>();
         
-        Vector3 stemOrigin = pointA.position;
-        Vector3 arrowTerminator = pointB.position;
+        Vector3 stemOrigin = pointA;
+        Vector3 arrowTerminator = pointB;
         float stemHalfWidth = stemWidth / 2;
         
         float arrowLength = Vector3.Distance(stemOrigin, arrowTerminator);
