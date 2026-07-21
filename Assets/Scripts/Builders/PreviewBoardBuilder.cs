@@ -3,12 +3,22 @@ using UnityEngine;
 
 namespace Builders
 {
+    /// <summary>
+    /// A class used to create a preview board for the Level Creation editor tool.
+    /// </summary>
+    /// <remarks>Not used in the final game.</remarks>
     public class PreviewBoardBuilder : MonoBehaviour
     {
         [SerializeField] private GameObject paintableTilePrefab;
         private GameObject boardRoot;
         private PaintableTile[,] previewTiles;
-    
+        
+        
+        /// <summary>
+        /// Method for generating a new board.
+        /// </summary>
+        /// <param name="x">An integer representing the width of the board in tiles.</param>
+        /// <param name="y">An integer representing the height of the board in tiles.</param>
         public void generateBoard(int x, int y)
         {
             boardRoot = new GameObject("Board");
@@ -30,6 +40,10 @@ namespace Builders
             }
         }
 
+        /// <summary>
+        /// A method for destroying the board object when it is ready to be discarded.
+        /// </summary>
+        /// <remarks>Should be called BEFORE changing scenes.</remarks>
         public void clearBoard()
         {
             boardRoot.SetActive(false);
