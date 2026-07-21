@@ -2,6 +2,11 @@ using UnityEngine;
 
 namespace Interfaces
 {
+    //TODO: Delete this class.
+    /// <summary>
+    /// Standardized interface for menus.
+    /// </summary>
+    /// <remarks>Unused.</remarks>
     public interface IMenu
     {
     
