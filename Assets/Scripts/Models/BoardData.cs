@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace Models
 {
+    /// <summary>
+    /// Represents the data portion of a Board class.
+    /// </summary>
     [System.Serializable]
     public class BoardData
     {

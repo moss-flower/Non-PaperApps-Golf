@@ -2,6 +2,9 @@ using UnityEngine;
 
 namespace Models
 {
+    /// <summary>
+    /// Class used as a base tile for the level creation Editor tool.
+    /// </summary>
     public class PaintableTile : MonoBehaviour
     {
         public TileDefinition tileDefinition;

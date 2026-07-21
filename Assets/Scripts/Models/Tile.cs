@@ -5,6 +5,9 @@ using UnityEngine.Serialization;
 
 namespace Models
 {
+    /// <summary>
+    /// A game object representing an in game tile, a position to which the ball can move.
+    /// </summary>
     public class Tile : MonoBehaviour, IClickable
     {
         [FormerlySerializedAs("eventManager")] [SerializeField] private GameEventHandler gameEventHandler;
@@ -14,7 +17,15 @@ namespace Models
         public Vector2Int coordinates { get; private set; }
     
         private bool isClickable = false;
-    
+        
+        
+        /// <summary>
+        /// A method used to construct tile info after the instantiation of the game object.
+        /// </summary>
+        /// <param name="tileDefinition">The characteristics of the tile, expressed as a Tile Definition object</param>
+        /// <param name="x">The horizontal position of the tile in the game board</param>
+        /// <param name="y">The vertical position of the tile in the game board</param>
+        /// <param name="gameEventHandler">A reference to the object that handles user interaction.</param>
         public void Initialize(TileDefinition tileDefinition, int x, int y, GameEventHandler gameEventHandler)
         {
             this.gameEventHandler = gameEventHandler;

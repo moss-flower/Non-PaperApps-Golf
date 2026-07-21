@@ -2,6 +2,9 @@ using UnityEngine;
 
 namespace Models
 {
+    /// <summary>
+    /// Base abstract class used to provide the methods for inherited menu objects.
+    /// </summary>
     public abstract class Menu : MonoBehaviour
     {
         private bool isOpen;

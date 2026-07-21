@@ -2,6 +2,10 @@ using UnityEngine;
 
 namespace Models
 {
+    /// <summary>
+    /// A scriptable object representing all the characteristics a tile can have.
+    /// New tiles are created by adding new combinations of these flags together.
+    /// </summary>
     [CreateAssetMenu(fileName = "NewTileDefinition", menuName = "Scripts/TileDefinition")]
     public class TileDefinition : ScriptableObject
     {

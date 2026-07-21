@@ -1,6 +1,9 @@
 
 namespace Models
 {
+    /// <summary>
+    /// Represents the currently active game State, minus the current player position (controller by the ball).
+    /// </summary>
     public class GameState
     {
         private string PlayerName { get; set; } = "Player";
