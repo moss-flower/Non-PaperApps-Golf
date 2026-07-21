@@ -8,6 +8,9 @@ using UnityEngine.UI;
 
 namespace Controller
 {
+    /// <summary>
+    /// A class used to handle the logic of Level Selection from the Level Selection Menu.
+    /// </summary>
     public class LevelSelectorMenu : Menu
     {
     
@@ -20,6 +23,9 @@ namespace Controller
     
         private int selectedLevel = -1;
 
+        /// <summary>
+        /// The menu queries the level manager and populates with available data.
+        /// </summary>
         private void OnEnable()
         {
             if (levelManager == null)
@@ -44,11 +50,12 @@ namespace Controller
             selectedLevel = -1;
         }
 
-        public void SelectLevel(int level)
+        
+        private void SelectLevel(int level)
         {
             selectedLevel = level;
         }
-
+        
         public void OnConfirmedClicked()
         {
             if (selectedLevel == -1)
@@ -67,6 +74,11 @@ namespace Controller
             }
         }
 
+        /// <summary>
+        /// Method for generating and instantiating Game objects based on Level/Board information for the game.
+        /// </summary>
+        /// <param name="boards">A list of boards from the <see cref="levelManager"/>.</param>
+        /// <exception cref="NullReferenceException">Thrown when a prefab is missing from the editor window.</exception>
         private void GenerateLevelList(List<BoardInfo> boards)
         {
         

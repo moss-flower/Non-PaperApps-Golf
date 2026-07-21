@@ -6,6 +6,10 @@ using UnityEngine;
 
 namespace Controller
 {
+    /// <summary>
+    /// A class for properly displaying options to the user when they finish a round of the game.
+    /// Contains links to the next level or the main menu, as well as handling the display of relevant metrics.
+    /// </summary>
     public class RoundEndController : Menu
     {
         [SerializeField] private Menu mainMenuUI;
@@ -29,6 +33,9 @@ namespace Controller
             menuManager.Open(mainMenuUI);
         }
 
+        /// <summary>
+        /// Handles the retrieval of game information for display.
+        /// </summary>
         public override void Open()
         {
             if (scorer == null)
