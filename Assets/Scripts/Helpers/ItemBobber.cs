@@ -1,17 +1,22 @@
-using System;
-using UnityEngine;
 using PrimeTween;
+using UnityEngine;
 
-public class ItemBobber : MonoBehaviour
+namespace Helpers
 {
-    // goal: make an item bob up and down
-    [SerializeField] private float endValue;
-    [SerializeField] private float duration;
-    
-    public void PlayAnimation()
+    /// <summary>
+    /// Test class built to understand the basics of PrimeTween.
+    /// </summary>
+    public class ItemBobber : MonoBehaviour
     {
-        Transform transform = this.transform;
-        Tween.PositionY(transform, endValue: transform.position.y + endValue, duration: duration, ease: Ease.InOutBack);
-        //this takes all the fun out of it! I don't have to do anything :(
+        // goal: make an item bob up and down
+        [SerializeField] private float endValue;
+        [SerializeField] private float duration;
+    
+        public void PlayAnimation()
+        {
+            Transform transform = this.transform;
+            Tween.PositionY(transform, endValue: transform.position.y + endValue, duration: duration, ease: Ease.InOutBack);
+            //this takes all the fun out of it! I don't have to do anything :(
+        }
     }
 }

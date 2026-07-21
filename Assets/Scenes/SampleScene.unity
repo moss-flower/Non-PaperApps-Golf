@@ -512,12 +512,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 720024013}
-        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: Managers.MenuManager, Assembly-CSharp
         m_MethodName: Open
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 472296202}
-          m_ObjectArgumentAssemblyTypeName: Menu, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: Models.Menu, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3645,12 +3645,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 720024013}
-        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: Managers.MenuManager, Assembly-CSharp
         m_MethodName: Open
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1623654181}
-          m_ObjectArgumentAssemblyTypeName: Menu, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: Models.Menu, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3794,12 +3794,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 720024013}
-        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: Managers.MenuManager, Assembly-CSharp
         m_MethodName: Open
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 472296202}
-          m_ObjectArgumentAssemblyTypeName: Menu, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: Models.Menu, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

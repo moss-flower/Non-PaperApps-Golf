@@ -1,10 +1,13 @@
 namespace Helpers
 {
+    /// <summary>
+    /// Tool for converting player scores into golf terms for display.
+    /// </summary>
     public class GolfScorer
     {
-        public string Score(int score_diff)
+        public static string Score(int scoreDiff)
         {
-            string score_name = score_diff switch
+            var scoreName = scoreDiff switch
             {
                 0 => "Par",
                 -1 => "Birdie",
@@ -19,7 +22,7 @@ namespace Helpers
                 4 => "Quadruple Bogey",
                 >= 5 => "Bogeyman",
             };
-            return score_name;
+            return scoreName;
         }
     }
 }
