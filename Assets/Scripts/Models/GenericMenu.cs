@@ -1,6 +1,7 @@
-using UnityEngine;
-
-public class GenericMenu : Menu
+namespace Models
 {
+    public class GenericMenu : Menu
+    {
         
+    }
 }

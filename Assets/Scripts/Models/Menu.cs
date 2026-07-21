@@ -1,35 +1,38 @@
 using UnityEngine;
 
-public abstract class Menu : MonoBehaviour
+namespace Models
 {
-    private bool isOpen;
-    private bool isCovered;
-
-    public virtual bool IsCovered()
+    public abstract class Menu : MonoBehaviour
     {
-        return isCovered;
-    }
+        private bool isOpen;
+        private bool isCovered;
 
-    public virtual bool IsOpen()
-    {
-        return isOpen;
-    }
+        public virtual bool IsCovered()
+        {
+            return isCovered;
+        }
 
-    public virtual void Open()
-    {
-        isOpen = true;
-        gameObject.SetActive(true);
-    }
+        public virtual bool IsOpen()
+        {
+            return isOpen;
+        }
 
-    public virtual void Close()
-    {
-        isOpen = false;
-        isCovered = false;
-        gameObject.SetActive(false);
-    }
+        public virtual void Open()
+        {
+            isOpen = true;
+            gameObject.SetActive(true);
+        }
 
-    public virtual void Cover(bool state)
-    {
-        isCovered = state;
+        public virtual void Close()
+        {
+            isOpen = false;
+            isCovered = false;
+            gameObject.SetActive(false);
+        }
+
+        public virtual void Cover(bool state)
+        {
+            isCovered = state;
+        }
     }
 }
