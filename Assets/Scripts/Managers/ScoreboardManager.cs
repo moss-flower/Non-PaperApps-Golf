@@ -3,6 +3,11 @@ using UnityEngine;
 
 namespace Managers
 {
+    
+    /// <summary>
+    /// Class that manages the scoreboard for the currently active level.
+    /// </summary>
+    /// <remarks>Technically a controller and technically a Game UI Controller, not a Scoreboard Manager.</remarks>
     public class ScoreboardManager : MonoBehaviour
     {
         [SerializeField] private GameManager gameManager;
@@ -28,6 +33,9 @@ namespace Managers
             gameManager.OnRoll -= UpdateRollUI;
         }
 
+        /// <summary>
+        /// Used to reset to a default/standard in a new level.
+        /// </summary>
         private void Initialize()
         {
             rollText.text = "Roll: ";

@@ -4,21 +4,30 @@ using UnityEngine;
 
 namespace Managers
 {
+    /// <summary>
+    /// A class for providing standard methods for menu transitions and overlays.
+    /// </summary>
     public class MenuManager : MonoBehaviour
     {
 
         //TODO: add "overlay" hierarchy list that allows for displaying several UI components over one another.
-    
         private Menu activeMenu;
         private List<Menu> overlays = new List<Menu>();
         [SerializeField] private Menu mainMenu;
         [SerializeField] private GameObject displayRoot;
         private GameObject activeOverlay;
+        
+        
+        
         void Awake()
         {
             Open(mainMenu);
         }
 
+        /// <summary>
+        /// Sets a new active primary menu. Closes current menu.
+        /// </summary>
+        /// <param name="menu">The <see cref="Menu"/> game object to be opened.</param>
         public void Open(Menu menu)
         {
             if (activeMenu != null)
@@ -29,6 +38,10 @@ namespace Managers
             activeMenu.Open();
         }
 
+        /// <summary>
+        /// Creates an overly over the currently active primary menu.
+        /// </summary>
+        /// <param name="overlay">A <see cref="Menu"/> object.</param>
         public void AddOverlay(Menu overlay)
         {
             if (activeMenu != null && !activeMenu.IsCovered())
@@ -41,6 +54,9 @@ namespace Managers
             overlay.Open();
         }
 
+        /// <summary>
+        /// Closes the topmost overlay.
+        /// </summary>
         public void CloseOverlay()
         {
             if (overlays.Count > 0)
@@ -51,6 +67,10 @@ namespace Managers
             }
         }
 
+        /// <summary>
+        /// Closes the current active primary menu.
+        /// </summary>
+        /// <remarks>unused.</remarks>
         public void Close()
         {
             activeMenu.Close();

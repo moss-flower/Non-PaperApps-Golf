@@ -5,6 +5,9 @@ using UnityEngine.InputSystem;
 
 namespace Managers
 {
+    /// <summary>
+    /// Handles conversion of user input into game actions.
+    /// </summary>
     public class InputHandler : MonoBehaviour
     {
         [SerializeField] private CameraController cam;
@@ -15,6 +18,7 @@ namespace Managers
 
         public event Action OnPause;
 
+        
         private void Awake()
         {
             panAction = InputSystem.actions.FindAction("Pan");

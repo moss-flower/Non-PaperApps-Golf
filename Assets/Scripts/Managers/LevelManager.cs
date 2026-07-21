@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace Managers
 {
+    /// <summary>
+    /// Used to translate board info without sending an entire board data class.
+    /// </summary>
     public struct BoardInfo
     {
         public string name;

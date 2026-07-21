@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace Managers
 {
+    /// <summary>
+    /// Class that handles event based UI occurrences (such as the loading, ending or pausing of the game).
+    /// </summary>
     public class UIManager : MonoBehaviour
     {
         [SerializeField] private GameManager gameManager;
