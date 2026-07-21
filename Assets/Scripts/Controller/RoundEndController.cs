@@ -52,7 +52,7 @@ namespace Controller
             {
                 par_num_Text.text = "3";
             }
-            calculated_par_result_Text.text = scorer.Score(finalScore - coursePar);
+            calculated_par_result_Text.text = GolfScorer.Score(finalScore - coursePar);
         }
     }
 }

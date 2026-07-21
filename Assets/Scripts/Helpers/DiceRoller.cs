@@ -2,20 +2,24 @@ using Random = System.Random;
 
 namespace Helpers
 {
+    /// <summary>
+    /// Random number generator for handling in game rolls.
+    /// </summary>
+    /// <remarks>Should be expanded to allow for multiple types of dice (simple upper value range)</remarks>
     public class DiceRoller
     {
         public DiceRoller()
         {
-            LastRoll = 0;
+            lastRoll = 0;
         }
     
-        public int LastRoll {get; private set;}
+        public int lastRoll {get; private set;}
     
         public int Roll()
         {
             Random random = new Random();
             int roll = random.Next(6) + 1;
-            LastRoll = roll;
+            lastRoll = roll;
             return roll;
         }
     }

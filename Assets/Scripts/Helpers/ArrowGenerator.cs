@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace Helpers
 {
+    /// <summary>
+    /// Class that generates arrow meshes.
+    /// </summary>
     [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer))]
     public class ArrowGenerator : MonoBehaviour
     {

@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace Helpers
 {
+    /// <summary>
+    /// Test class built to understand the basics of PrimeTween.
+    /// </summary>
     public class ItemBobber : MonoBehaviour
     {
         // goal: make an item bob up and down

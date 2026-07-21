@@ -3,6 +3,10 @@ using UnityEngine;
 
 namespace Helpers
 {
+    /// <summary>
+    /// Tool built to animate TMP objects.
+    /// </summary>
+    /// <remarks>Unfinished.</remarks>
     public class TMPUtility : MonoBehaviour
     {
         private TextMeshPro m_textMeshPro;
