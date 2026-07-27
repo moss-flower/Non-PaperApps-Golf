@@ -18,4 +18,6 @@ MonoBehaviour:
   isTargetable: 0
   isPuttable: 0
   isClearView: 0
-  sprite: {fileID: -8002853518667437673, guid: 7883d40be400719dab0e1cd6a83d2b0c, type: 3}
+  isStartingTile: 0
+  isWinningTile: 0
+  sprite: {fileID: 195774580, guid: c22ed99ef9f21acfeba3b279a1a44265, type: 3}
