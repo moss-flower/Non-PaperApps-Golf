@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: UIPanelTest
-  m_Shader: {fileID: -6465566751694194690, guid: e47c6606dc01f17d28b072447a8216e6, type: 3}
+  m_Name: PanelScrollingBorder
+  m_Shader: {fileID: -6465566751694194690, guid: 33e0b20e91480896ca5219e69f185dac, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -23,12 +23,20 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Border_MainTex:
+        m_Texture: {fileID: 2800000, guid: 3b56722aa011ca391a2e989ff6e46437, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _AlphaTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Border:
+        m_Texture: {fileID: 3316425174430470091, guid: d43b037198158a8ec8e6aff70806a101, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 8300712400058098730, guid: d43b037198158a8ec8e6aff70806a101, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskTex:
@@ -53,11 +61,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Amplitude: 1.22
+    - _Border_Thicknes: 0.64
     - _ColorMask: 15
-    - _Direction_Toggle: 0
     - _EnableExternalAlpha: 0
-    - _Mask_Height: 5.15
+    - _ScrollSpeed: -0.01
     - _Stencil: 0
     - _StencilComp: 8
     - _StencilOp: 0
@@ -65,12 +72,11 @@ Material:
     - _StencilWriteMask: 255
     - _UIMaskSoftnessX: 1
     - _UIMaskSoftnessY: 1
-    - _Wave_Frequency: 10.2
-    - _Wave_Speed: -2
     - _ZWrite: 0
     m_Colors:
+    - _Background_Color: {r: 1, g: 0.30874828, b: 0, a: 1}
     - _ClipRect: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 0.406206, b: 0, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
