@@ -20,4 +20,4 @@ MonoBehaviour:
   isClearView: 0
   isStartingTile: 0
   isWinningTile: 0
-  sprite: {fileID: -1593006996, guid: c22ed99ef9f21acfeba3b279a1a44265, type: 3}
+  sprite: {fileID: -806710241, guid: 9bc7b139a09ab653f90bac64bc26b3d9, type: 3}

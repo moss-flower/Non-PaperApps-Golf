@@ -24,8 +24,8 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Border_MainTex:
-        m_Texture: {fileID: 2800000, guid: 3b56722aa011ca391a2e989ff6e46437, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Texture: {fileID: 2800000, guid: 052f70797d54b1d9989cc1adb7aba98b, type: 3}
+        m_Scale: {x: 10, y: 10}
         m_Offset: {x: 0, y: 0}
     - _AlphaTex:
         m_Texture: {fileID: 0}
@@ -61,10 +61,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Border_Thicknes: 0.64
+    - _Border_Thicknes: 0.65
     - _ColorMask: 15
     - _EnableExternalAlpha: 0
-    - _ScrollSpeed: -0.01
+    - _ScrollSpeed: -0.03
     - _Stencil: 0
     - _StencilComp: 8
     - _StencilOp: 0
@@ -76,7 +76,7 @@ Material:
     m_Colors:
     - _Background_Color: {r: 1, g: 0.30874828, b: 0, a: 1}
     - _ClipRect: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 1, g: 0.406206, b: 0, a: 1}
+    - _Color: {r: 0.9019608, g: 0.32941177, b: 0, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
