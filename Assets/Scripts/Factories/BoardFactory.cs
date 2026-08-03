@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Controller;
+using Helpers;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Random = System.Random;
@@ -83,8 +84,12 @@ namespace Factories
         foreach (TileData data in boardData.tiles)
         {
             GameObject tile = Instantiate(tilePrefab, new Vector3(data.x*0.5f, data.y*0.5f, 0), Quaternion.identity, parent);
+            tile.layer = 3;
             Tile tileComponent = tile.GetComponent<Tile>();
+            TileDefinition definition = ParseTileDefinition(data.type);
             tileComponent.Initialize(ParseTileDefinition(data.type),  data.x, data.y, gameEventHandler);
+            TileJiggler jiggler = tile.GetComponent<TileJiggler>();
+            jiggler.Initialize(definition.isTargetable);
             board.tiles[data.x,data.y] = tileComponent;
         }
         board.startTileLocation = boardData.startTileLocation;

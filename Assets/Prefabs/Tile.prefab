@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4459856786198172146}
   - component: {fileID: 2443399963267632123}
   - component: {fileID: -544295410159461586}
+  - component: {fileID: 6906162128413742134}
   m_Layer: 0
   m_Name: Tile
   m_TagString: Untagged
@@ -106,6 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b0cd2dd520782e0d9f03a7140695750, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tile
+  gameEventHandler: {fileID: 0}
 --- !u!61 &2443399963267632123
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -164,3 +166,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0608afff03f34de5a01e4e225c2d7ff4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickDetector
+--- !u!114 &6906162128413742134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475330706222410343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e336571089e4b1aa2df1dc495338428, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Helpers.TileJiggler
+  strength: 0.75

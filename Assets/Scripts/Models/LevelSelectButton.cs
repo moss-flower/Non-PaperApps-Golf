@@ -1,6 +1,7 @@
 using Controller;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Models
 {
@@ -14,6 +15,9 @@ namespace Models
         [SerializeField] TMP_Text levelDescriptionText;
         private int index;
         private LevelSelectorMenu levelSelectorMenu;
+        private Button button;
+        private Image backgroundImage;
+        private Color defaultColor;
     
         /// <summary>
         /// Effectively a constructor function. Populates the button after the prefab object has been initialized.
@@ -27,11 +31,26 @@ namespace Models
             this.index = index;
             levelDescriptionText.text = index.ToString();
             levelSelectorMenu = menu;
+            button = GetComponent<Button>();
+            backgroundImage = GetComponent<Image>();
+            defaultColor = backgroundImage.color;
         }
 
         public void OnClick()
         {
-            levelSelectorMenu.OnClick(index);
+            levelSelectorMenu.OnClick(index, this);
         }
+
+        public void setActive()
+        {
+            backgroundImage.color = button.colors.selectedColor;
+        }
+
+        public void setInactive()
+        {
+            backgroundImage.color = defaultColor;
+        }
+        
+        
     }
 }
