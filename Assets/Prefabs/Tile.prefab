@@ -178,3 +178,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e336571089e4b1aa2df1dc495338428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Helpers.TileJiggler
+  strength: 0.75
