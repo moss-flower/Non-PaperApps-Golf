@@ -20,6 +20,7 @@ namespace Controller
         [SerializeField] private ScrollRect scrollRect;
     
         [SerializeField] private LevelManager levelManager;
+        private LevelSelectButton selectedLevelButton;
     
         private int selectedLevel = -1;
 
@@ -51,9 +52,15 @@ namespace Controller
         }
 
         
-        private void SelectLevel(int level)
+        private void SelectLevel(int level, LevelSelectButton button)
         {
             selectedLevel = level;
+            if (selectedLevelButton != null)
+            {
+                selectedLevelButton.setInactive();
+            }
+            button.setActive();
+            selectedLevelButton = button;
         }
         
         public void OnConfirmedClicked()
@@ -108,9 +115,9 @@ namespace Controller
         
         }
 
-        public void OnClick(int level)
+        public void OnClick(int level, LevelSelectButton button)
         {
-            SelectLevel(level);
+            SelectLevel(level, button);
         }
     
         IEnumerator ResetScrollPosition()

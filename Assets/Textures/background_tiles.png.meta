@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8bca53a61a7cfbaaf8eef0e44aac66d0
+guid: 0a7397e7f4eec433ab1b22261bc5b3f5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6903080309547385617
-    second: background_small_0
+      213: -2269885790595880052
+    second: background_tiles_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,9 +40,9 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: background_small_0
+      name: background_tiles_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 540
-        height: 216
+        width: 256
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fec3f6558055330a0800000000000000
-      internalID: -6903080309547385617
+      spriteID: c8b63da56eebf70e0800000000000000
+      internalID: -2269885790595880052
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      background_small_0: -6903080309547385617
+      background_tiles_0: -2269885790595880052
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
