@@ -1456,7 +1456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Models.SoundEmitter
   channel: {fileID: 11400000, guid: 95793fa5f11c3cf67b4ee1fdb8caac81, type: 2}
-  cue: {fileID: 11400000, guid: 2fdeab4b35176202fa358ec1c7d0134f, type: 2}
+  cue: {fileID: 11400000, guid: dc2d0a2c3b9f64f7ab5132725b58e678, type: 2}
 --- !u!1 &405872275
 GameObject:
   m_ObjectHideFlags: 0
@@ -1648,6 +1648,7 @@ GameObject:
   - component: {fileID: 448280314}
   - component: {fileID: 448280317}
   - component: {fileID: 448280318}
+  - component: {fileID: 448280319}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -1731,6 +1732,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 448280319}
+        m_TargetAssemblyTypeName: Models.SoundEmitter, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &448280315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1797,6 +1810,20 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 3, y: 3}
   m_UseGraphicAlpha: 1
+--- !u!114 &448280319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448280312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd3b0e0a3b92420081b7fe8cec4d0c51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Models.SoundEmitter
+  channel: {fileID: 11400000, guid: 95793fa5f11c3cf67b4ee1fdb8caac81, type: 2}
+  cue: {fileID: 11400000, guid: 37c76a569e3274d43b4c76d1377d5b86, type: 2}
 --- !u!1 &465409692
 GameObject:
   m_ObjectHideFlags: 0
@@ -3434,7 +3461,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Models.SoundEmitter
   channel: {fileID: 11400000, guid: 95793fa5f11c3cf67b4ee1fdb8caac81, type: 2}
-  cue: {fileID: 11400000, guid: 2fdeab4b35176202fa358ec1c7d0134f, type: 2}
+  cue: {fileID: 11400000, guid: fa7c2e9251ebc45e7aea1eabbd287a5b, type: 2}
 --- !u!1 &965272492
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,4 +1,5 @@
 using Interfaces;
+using Models;
 using UnityEngine;
 
 namespace Helpers
@@ -11,6 +12,7 @@ namespace Helpers
         private void OnMouseDown()
         {
             GetComponent<IClickable>().OnClicked();
+            GetComponent<SoundEmitter>().PlaySound();
         }
     }
 }
