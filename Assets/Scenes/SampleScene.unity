@@ -3475,6 +3475,7 @@ GameObject:
   - component: {fileID: 965272495}
   - component: {fileID: 965272494}
   - component: {fileID: 965272497}
+  - component: {fileID: 965272498}
   m_Layer: 0
   m_Name: Menu Button
   m_TagString: Untagged
@@ -3558,6 +3559,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 965272498}
+        m_TargetAssemblyTypeName: Models.SoundEmitter, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &965272495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3611,6 +3624,20 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 3, y: 3}
   m_UseGraphicAlpha: 1
+--- !u!114 &965272498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965272492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd3b0e0a3b92420081b7fe8cec4d0c51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Models.SoundEmitter
+  channel: {fileID: 11400000, guid: 95793fa5f11c3cf67b4ee1fdb8caac81, type: 2}
+  cue: {fileID: 11400000, guid: fa7c2e9251ebc45e7aea1eabbd287a5b, type: 2}
 --- !u!1 &1067485590
 GameObject:
   m_ObjectHideFlags: 0
@@ -4010,18 +4037,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 720024013}
-        m_TargetAssemblyTypeName: Managers.MenuManager, Assembly-CSharp
-        m_MethodName: Open
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 472296202}
-          m_ObjectArgumentAssemblyTypeName: Models.Menu, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1413315691}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: TogglePause
@@ -4029,6 +4044,30 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1413315691}
+        m_TargetAssemblyTypeName: Managers.GameManager, Assembly-CSharp
+        m_MethodName: CleanGameState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 720024013}
+        m_TargetAssemblyTypeName: Managers.MenuManager, Assembly-CSharp
+        m_MethodName: Open
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 472296202}
+          m_ObjectArgumentAssemblyTypeName: Models.Menu, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5215,6 +5254,7 @@ GameObject:
   - component: {fileID: 1437681321}
   - component: {fileID: 1437681320}
   - component: {fileID: 1437681323}
+  - component: {fileID: 1437681324}
   m_Layer: 0
   m_Name: Next Level Button
   m_TagString: Untagged
@@ -5298,6 +5338,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1437681324}
+        m_TargetAssemblyTypeName: Models.SoundEmitter, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1437681321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5351,6 +5403,20 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 3, y: 3}
   m_UseGraphicAlpha: 1
+--- !u!114 &1437681324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437681318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd3b0e0a3b92420081b7fe8cec4d0c51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Models.SoundEmitter
+  channel: {fileID: 11400000, guid: 95793fa5f11c3cf67b4ee1fdb8caac81, type: 2}
+  cue: {fileID: 11400000, guid: dc2d0a2c3b9f64f7ab5132725b58e678, type: 2}
 --- !u!1 &1474669726
 GameObject:
   m_ObjectHideFlags: 0

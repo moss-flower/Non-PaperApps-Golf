@@ -12,7 +12,6 @@ namespace Helpers
         private void OnMouseDown()
         {
             GetComponent<IClickable>().OnClicked();
-            GetComponent<SoundEmitter>().PlaySound();
         }
     }
 }

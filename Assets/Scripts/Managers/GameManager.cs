@@ -151,11 +151,16 @@ namespace Managers
         
             if (selectedTile.tileDefinition.isWinningTile)
             {
-                gameState.endGame();
-                arrowBuilder.RemoveArrows();
+                CleanGameState();
                 OnRoundEnd?.Invoke();
             }
         
+        }
+
+        public void CleanGameState()
+        {
+            gameState.endGame();
+            arrowBuilder.RemoveArrows();
         }
 
         private Vector3 calculateBoardOffset(Vector2Int boardSize)

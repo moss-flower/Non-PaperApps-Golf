@@ -8,6 +8,7 @@ namespace Models
     /// <summary>
     /// A game object representing an in game tile, a position to which the ball can move.
     /// </summary>
+    [RequireComponent(typeof(SoundEmitter))]
     public class Tile : MonoBehaviour, IClickable
     {
         [FormerlySerializedAs("eventManager")] [SerializeField] private GameEventHandler gameEventHandler;
@@ -39,6 +40,7 @@ namespace Models
         {
             if (isClickable)
             {
+                GetComponent<SoundEmitter>().PlaySound();
                 gameEventHandler.OnClickEvent(coordinates.x, coordinates.y);
             }
         
