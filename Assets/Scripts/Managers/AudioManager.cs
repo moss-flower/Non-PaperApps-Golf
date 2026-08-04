@@ -7,6 +7,7 @@ namespace Managers
     public class AudioManager : MonoBehaviour
     {
         [SerializeField] private AudioEventChannelS0 sfxChannel;
+        [SerializeField] private AudioSourcePool pool;
 
         private void OnEnable()
         {
@@ -20,7 +21,13 @@ namespace Managers
 
         private void HandleAudioCueRequested(AudioCueSO audioCue)
         {
-            
+            var emitter = pool.Get();
+            emitter.PlaySfx(audioCue, OnTrackFinished);
+        }
+
+        private void OnTrackFinished(SoundPlayer player)
+        {
+            pool.Release(player);
         }
     }
 }

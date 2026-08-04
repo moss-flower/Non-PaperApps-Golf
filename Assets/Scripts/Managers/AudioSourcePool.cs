@@ -6,45 +6,45 @@ namespace Managers
 {
     public class AudioSourcePool : MonoBehaviour
     {
-        [SerializeField] private SoundEmitter prefab;
+        [SerializeField] private SoundPlayer prefab;
         [SerializeField] private int capacity = 8;
         
-        private ObjectPool<SoundEmitter> pool;
+        private ObjectPool<SoundPlayer> pool;
 
         private void Awake()
         {
-            pool = new ObjectPool<SoundEmitter>(Spawn, OnGet, OnReturn, OnDestroyEmitter, true, capacity, 100);
+            pool = new ObjectPool<SoundPlayer>(Spawn, OnGet, OnReturn, OnDestroyEmitter, true, capacity, 100);
         }
 
-        public SoundEmitter Get()
+        public SoundPlayer Get()
         {
             return pool.Get();
         }
 
-        public void Release(SoundEmitter emitter)
+        public void Release(SoundPlayer player)
         {
-            pool.Release(emitter);
+            pool.Release(player);
         }
 
-        private SoundEmitter Spawn()
+        private SoundPlayer Spawn()
         {
             var emitter = Instantiate(prefab, transform);
             return emitter;
         }
 
-        private void OnGet(SoundEmitter emitter)
+        private void OnGet(SoundPlayer player)
         {
-            emitter.gameObject.SetActive(true);
+            player.gameObject.SetActive(true);
         }
         
-        private void OnReturn(SoundEmitter emitter)
+        private void OnReturn(SoundPlayer player)
         {
-            emitter.gameObject.SetActive(false);
+            player.gameObject.SetActive(false);
         }
 
-        private void OnDestroyEmitter(SoundEmitter emitter)
+        private void OnDestroyEmitter(SoundPlayer player)
         {
-            Destroy(emitter.gameObject);
+            Destroy(player.gameObject);
         }
 
     }
