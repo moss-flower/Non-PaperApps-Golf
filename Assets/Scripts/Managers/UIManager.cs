@@ -1,5 +1,6 @@
 using Models;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Managers
 {
@@ -13,6 +14,13 @@ namespace Managers
         [SerializeField] private Menu gameUI;
         [SerializeField] private Menu roundEndController;
         [SerializeField] private Menu pauseMenu;
+        //below should be refactored into its own class, which the Ui manager perhaps calls. 
+        //this will serve in the meantime.
+        [Header("Sound Cues")]
+        [SerializeField] private AudioCueSO roundEndSound;
+        [SerializeField] private AudioCueSO pauseSound;
+        [SerializeField] private AudioCueSO unpauseSound;
+        [SerializeField] private AudioEventChannelS0 eventChannel;
     
         //note, this is where we could technically use an interface and swappable components to handle
         //updates and transitioning between scenes. (Eg, a universal update call so that the UI manager didn't have to care)
@@ -42,6 +50,7 @@ namespace Managers
         void LoadEndRoundUI()
         {
             menuManager.Open(roundEndController);
+            eventChannel.RaiseEvent(roundEndSound);
         }
 
         void TogglePauseMenu()
@@ -49,10 +58,12 @@ namespace Managers
             if (gameManager.IsPaused())
             {
                 menuManager.AddOverlay(pauseMenu);
+                eventChannel.RaiseEvent(pauseSound);
             }
             else
             {
                 menuManager.CloseOverlay();
+                eventChannel.RaiseEvent(unpauseSound);
             }
         }
     }
