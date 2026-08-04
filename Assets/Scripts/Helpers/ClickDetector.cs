@@ -1,4 +1,5 @@
 using Interfaces;
+using Models;
 using UnityEngine;
 
 namespace Helpers

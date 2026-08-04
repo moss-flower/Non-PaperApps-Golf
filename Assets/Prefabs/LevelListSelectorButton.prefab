@@ -438,6 +438,7 @@ GameObject:
   - component: {fileID: 8501776696693492925}
   - component: {fileID: 5817112555400391137}
   - component: {fileID: 3326792544026173870}
+  - component: {fileID: 9216841245757839004}
   m_Layer: 0
   m_Name: LevelListSelectorButton
   m_TagString: Untagged
@@ -562,6 +563,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 9216841245757839004}
+        m_TargetAssemblyTypeName: Models.SoundEmitter, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5817112555400391137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -591,3 +604,17 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 3, y: 3}
   m_UseGraphicAlpha: 1
+--- !u!114 &9216841245757839004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8557400849849690851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd3b0e0a3b92420081b7fe8cec4d0c51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Models.SoundEmitter
+  channel: {fileID: 11400000, guid: 95793fa5f11c3cf67b4ee1fdb8caac81, type: 2}
+  cue: {fileID: 11400000, guid: 2fdeab4b35176202fa358ec1c7d0134f, type: 2}
