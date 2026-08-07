@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e336571089e4b1aa2df1dc495338428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Helpers.TileJiggler
-  strength: 0.75
+  strength: 0.9
 --- !u!114 &9060738910333771538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,3 +194,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Models.SoundEmitter
   channel: {fileID: 11400000, guid: 95793fa5f11c3cf67b4ee1fdb8caac81, type: 2}
   cue: {fileID: 11400000, guid: b3e84044153664fa18f432b4c5f23cdf, type: 2}
+  PlayOnEnable: 0
