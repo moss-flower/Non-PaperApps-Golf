@@ -1,17 +1,22 @@
 # Non-Paper Apps Golf
-
 Non-Paper Apps Golf is a 2d, tile based, dice powered golf game based on the notepad game Paper Apps Golf.
 
-<img width="400" height="620" alt="main_menu_screenshot" src="https://github.com/user-attachments/assets/8016ac74-b736-4f8b-9f31-dc9e0ef5f6f1" />
+<p align="center">
+  <img width="400" height="620" alt="main_menu_screenshot" src="https://github.com/user-attachments/assets/8016ac74-b736-4f8b-9f31-dc9e0ef5f6f1" />
+</p>
 
-## Demo
+<details>
+  <summary>Click here to see demo</summary>
 
-https://github.com/user-attachments/assets/102ef89e-81ed-4ceb-ba44-84dcbff83496
-
-
+  <div align="center">
+  ## Demo
+  
+  https://github.com/user-attachments/assets/102ef89e-81ed-4ceb-ba44-84dcbff83496
+  </div>
+</details>
 
 ## Installation
-If you just want to give the game a try, download for your Operating System via the Releases tab on the side (coming soon). 
+Mac release available under releases in the sidebar. Windows and Linux versions coming soon.
 
 If you want to build it yourself (not recommended) via the unity engine, please follow the following steps:
 
@@ -21,15 +26,15 @@ If you want to build it yourself (not recommended) via the unity engine, please 
 4. Close the project and reopen it for the necessary changes to take effect.
 
 ## System Design and Future Builds
-For an outline of how the systems in the project were structured, and what I would do if I had more time to expand the game, see the following link: (Insert link here).
-
+There's documentation in the codes. Working on a WIKI now to outline how the tile and map system work.
 
 ## Credits
 
-This is an implementation of the Paper Apps — Golf notebook game. I built this project as a way of re-learning the Unity Engine over the summer of 2026. 
-
 In the process of developing this application I used the following references and resources. If you suspect I've used your work and didn't leave credit, let me know. I did my best to keep track of the different videos, articles, books or forum posts that I used for reference, but some will have inevitably slipped through the cracks.
 
-(Prime tween credit here).
+- PrimeTween by Kyrylo Kuzyk (Tweening library used to bring life to the games animations)
+- [Working with Github (Unity Manual)](https://learn.unity.com/tutorial/working-with-unity-and-github)
+- [How to set up Github with Unity the Right Way](https://www.youtube.com/watch?v=tTIlDb71t2s)
+- (More coming, saved on another computer)
 
 
