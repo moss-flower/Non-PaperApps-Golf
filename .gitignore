@@ -125,3 +125,4 @@ InitTestScene*.unity*
 tags
 
 .DS_Store.DS_Store
+.vscode/
