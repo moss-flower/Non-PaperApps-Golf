@@ -26,7 +26,7 @@ If you want to build it yourself (not recommended) via the unity engine, please 
 4. Close the project and reopen it for the necessary changes to take effect.
 
 ## System Design and Future Builds
-There's documentation in the codes. Working on a WIKI now to outline how the tile and map system work.
+Coming soon.
 
 ## Credits
 
