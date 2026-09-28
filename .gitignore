@@ -123,3 +123,5 @@ InitTestScene*.unity*
 [._]*.un~
 
 tags
+
+.DS_Store.DS_Store
