@@ -1,5 +1,5 @@
 # Non-Paper Apps Golf
-Non-Paper Apps Golf is a 2d, tile based, dice powered golf game based on the notepad game Paper Apps Golf.
+Non-Paper Apps Golf is a 2d, tile based, dice powered golf game based on the notepad game [Paper Apps™ GOLF](https://gladdendesign.com/products/paper-apps-golf) by GladdenDesign.
 
 <p align="center">
   <img width="400" height="620" alt="main_menu_screenshot" src="https://github.com/user-attachments/assets/8016ac74-b736-4f8b-9f31-dc9e0ef5f6f1" />
